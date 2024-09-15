@@ -9,7 +9,6 @@
 - **Cart System**: Add items to the cart, manage quantities, and place orders.
 - **Discounts**: View featured discounts, combo deals, flash sales, and apply discount codes.
 - **Reviews & Ratings**: Users can submit reviews and rate items after placing an order.
-- **Order Tracking**: Users can track the status of their orders.
 - **Admin Panel**: Manage menu items, discounts, and orders via the Django admin dashboard.
 
 ## Technologies Used
@@ -23,7 +22,7 @@
 
 ### Backend
 - **Django**: For handling server-side logic, database management, and APIs.
-- **SQLite/MySQL**: For managing the database (configurable based on environment).
+- **SQLite**: For managing the database (configurable based on environment).
 - **Django REST Framework**: For creating RESTful APIs to interact with the frontend.
 - **Django Model**: Custom models for managing users, reviews, menu items, discounts, and orders.
 
@@ -37,8 +36,8 @@
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/foodie-backend.git
-    cd foodie-backend
+    git clone https://github.com/darshangohil46/food_ordering_website.git
+    cd food_ordering_website
     ```
 
 2. Install dependencies:
@@ -48,6 +47,7 @@
 
 3. Apply migrations:
     ```bash
+    python manage.py makemigrations
     python manage.py migrate
     ```
 
@@ -55,6 +55,7 @@
     ```bash
     python manage.py createsuperuser
     ```
+    - Fill correct phone end email id (phone number is verified by Twillo)
 
 5. Run the Django development server:
     ```bash
@@ -65,7 +66,8 @@
 
 1. Navigate to the frontend directory:
     ```bash
-    cd foodie-frontend
+    cd food_ordering_website
+    cd frontend
     ```
 
 2. Install dependencies:
@@ -105,24 +107,17 @@
 
 ### Authentication
 
-- **POST** `/api/auth/login/` – Log in using phone number and OTP.
-- **POST** `/api/auth/register/` – Register a new user with phone number and profile details.
-- **POST** `/api/auth/send-otp/` – Send an OTP for phone number verification.
+- **POST** `/api/check-phone/` – check phone number is valid or not.
+- **POST** `/api/send-otp/` – Send an OTP for phone number verification.
 
 ### Menu
 
 - **GET** `/api/menu/` – Retrieve a list of available menu items.
-- **GET** `/api/menu/{id}/` – Retrieve details of a specific menu item.
-
-### Orders
-
-- **POST** `/api/orders/` – Place a new order.
-- **GET** `/api/orders/{id}/` – Retrieve the status of a specific order.
 
 ### Reviews
 
-- **POST** `/api/reviews/` – Submit a new review for a menu item.
-- **GET** `/api/reviews/{item_id}/` – Retrieve reviews for a specific item.
+- **POST** `/api/submit-reviews/` – Submit a new review for a menu item.
+- **GET** `/api/reviews/` – Retrieve reviews.
 
 ## Future Enhancements
 
