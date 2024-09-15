@@ -34,14 +34,13 @@
 
 
 # fill up these details(setting.py)
--EMAIL_HOST_USER = "your_email_id@gmail.com"
--EMAIL_HOST_PASSWORD = "your_password_after_2_step_verication"
--DEFAULT_FROM_EMAIL = "your_email_id@gmail.com"
+- EMAIL_HOST_USER = "your_email_id@gmail.com".
+- EMAIL_HOST_PASSWORD = "your_password_after_2_step_verication".
+- DEFAULT_FROM_EMAIL = "your_email_id@gmail.com".
 
-
--TWILIO_ACCOUNT_SID = "twillo_acc_sid"
--TWILIO_AUTH_TOKEN = "twillo_auth_token"
--TWILIO_PHONE_NUMBER = "twill_number"
+- TWILIO_ACCOUNT_SID = "twillo_acc_sid".
+- TWILIO_AUTH_TOKEN = "twillo_auth_token".
+- TWILIO_PHONE_NUMBER = "twill_number".
 
 
 ## Installation
