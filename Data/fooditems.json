@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "category": "Cuisine",
+        "title": "Featured Dish",
+        "special": "Chef's Special",
+        "description": "Enjoy our chef's special, a culinary delight made with the freshest ingredients.",
+        "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&h=250&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+        "id": 2,
+        "category": "Desserts",
+        "title": "Sweet Treats",
+        "special": "Delicious Desserts",
+        "description": "Indulge in our delightful desserts, perfect for satisfying your sweet tooth.",
+        "imageUrl": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=200&h=250&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGRlc3NlcnR8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+        "id": 3,
+        "category": "Beverages",
+        "title": "Refreshing Drinks",
+        "special": "Cool & Refreshing",
+        "description": "Quench your thirst with our selection of refreshing beverages.",
+        "imageUrl": "https://images.unsplash.com/photo-1708455398647-9f79425512fa?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "id": 4,
+        "category": "Specials",
+        "title": "Daily Specials",
+        "special": "Limited Time",
+        "description": "Don't miss our daily specials, available for a limited time only.",
+        "imageUrl": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=200&h=250&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGRpc2hlc3xlbnwwfHwwfHx8MA%3D%3D"
+    }
+]

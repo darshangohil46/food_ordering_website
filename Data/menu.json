@@ -1,0 +1,762 @@
+[
+    {
+        "id": 1,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0839ff574213e6f35b3899ebf1fc597",
+        "price": "ITEMS AT ₹179",
+        "restaurant_name": "Chinese Wok",
+        "rating": "4.3",
+        "type": "Chinese, Asian, Tibetan, Desserts",
+        "address": "CG Road",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 2,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/11/4ee8bc77-ca9f-41bd-a0f3-511c70902b91_81814.JPG",
+        "price": "ITEMS AT ₹99",
+        "restaurant_name": "Burger King",
+        "rating": "4.3",
+        "type": "Burgers, American, Salads, Beverages, Chaat",
+        "address": "Ellisbridge",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 3,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2b4f62d606d1b2bfba9ba9e5386fabb7",
+        "price": "ITEMS AT ₹189",
+        "restaurant_name": "Pizza Hut",
+        "rating": "4.1",
+        "type": "Pizzas",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 4,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/22/bb229a24-2065-4008-a6f4-42e4f8d0b291_791609.jpg",
+        "price": "20% OFF",
+        "restaurant_name": "Theobroma",
+        "rating": "4.6",
+        "type": "Desserts",
+        "address": "CG Road",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 5,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/d08dc977-5e85-46df-8142-feb32cd9873b_395939.JPG",
+        "price": "40% OFF UPTO ₹80",
+        "restaurant_name": "KFC",
+        "rating": "4.3",
+        "type": "Burgers, Fast Food, Rolls & Wraps",
+        "address": "Paldi & Ambawadi",
+        "timing": "20-25 mins"
+    },
+    {
+        "id": 6,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/7eda3965-087e-4f82-8419-5b6fbf1eea0a_668681.jpg",
+        "price": "151 OFF ABOVE ₹699",
+        "restaurant_name": "McDonald's",
+        "rating": "4.5",
+        "type": "Burgers, Beverages, Cafe, Desserts",
+        "address": "Reliance Mall",
+        "timing": "-60 mins"
+    },
+    {
+        "id": 7,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/d20fdc8c86aa8bd0638f47dd013d46f9",
+        "price": "ITEMS AT ₹159",
+        "restaurant_name": "La Pino'z Pizza",
+        "rating": "4.5",
+        "type": "Pizzas, Pastas, Italian, Desserts, Beverages",
+        "address": "Ellis Bridge",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 8,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/4/4fe8d129-44fd-469e-9eda-a1416a6dffcd_40831.JPG",
+        "price": "40% OFF UPTO ₹80",
+        "restaurant_name": "Subway",
+        "rating": "4.5",
+        "type": "Healthy Food, Salads, Snacks, Desserts, Beverages",
+        "address": "Navrangpura",
+        "timing": "35-40 mins"
+    },
+    {
+        "id": 9,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/b3915967a4dbe11f614fc9f535e53f83",
+        "price": "60% OFF UPTO ₹115",
+        "restaurant_name": "Roastea - Curated Coffee And Tea Artisans",
+        "rating": "4.1",
+        "type": "Cafe, Italian, Mexican, Healthy Food, Bakery, Beverages, Indian",
+        "address": "Navrangpura",
+        "timing": "20-25 mins"
+    },
+    {
+        "id": 10,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/02dc35ca501fe62ef571bb8857f9e960",
+        "price": "Not Define",
+        "restaurant_name": "Gajanand Pauva House",
+        "rating": "4.2",
+        "type": "Snacks, Indian, Beverages, Juices",
+        "address": "Astodia",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 11,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/dpaim4ywqfqrs0aiy2ze",
+        "price": "Not Define",
+        "restaurant_name": "Karnavati Dabeli",
+        "rating": "4",
+        "type": "Street Food",
+        "address": "Ellisbridge",
+        "timing": "15-20 mins"
+    },
+    {
+        "id": 12,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/13/a4be512d-50b4-4607-88b3-dce71281cca2_65400.jpg",
+        "price": "10% OFF UPTO ₹100",
+        "restaurant_name": "New Freeze Land",
+        "rating": "4.6",
+        "type": "Cafe, American, Chinese, Street Food, Italian, Pizzas, Beverages, Desserts",
+        "address": "Ellisbridge",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 13,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/9116f74999706a5d8eac1df55065fc84",
+        "price": "40% OFF UPTO ₹80",
+        "restaurant_name": "Saladific",
+        "rating": "4.4",
+        "type": "Salads, Healthy Food",
+        "address": "Suchitra Circle",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 14,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/takhc38rjdd0xmhllmve",
+        "price": "25% OFF UPTO ₹65",
+        "restaurant_name": "Jayhind Sweets",
+        "rating": "4.4",
+        "type": "Sweets, Desserts, Indian",
+        "address": "LalDarwaja",
+        "timing": "0-45 mins"
+    },
+    {
+        "id": 15,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/13a27992d9f24b997e24644cb23b8ce4",
+        "price": "40% OFF UPTO ₹80",
+        "restaurant_name": "Wagh Bakri Tea Lounge",
+        "rating": "4.4",
+        "type": "Beverages, Snacks, Bakery",
+        "address": "Ellisbridge",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 16,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/a038867676057ae9aebe1b84221f138a",
+        "price": "50% OFF UPTO ₹95",
+        "restaurant_name": "Gwalia Sweets & Fast Food",
+        "rating": "4.4",
+        "type": "North Indian, Chaat, Snacks, Bakery, Desserts, Beverages",
+        "address": "Maninagar",
+        "timing": "5-50 mins"
+    },
+    {
+        "id": 17,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/5/29/553a5248-5dd8-4b0c-a02a-d2a81a12fc94_196811.jpg",
+        "price": "40% OFF UPTO ₹75",
+        "restaurant_name": "Radhika'S Authentic South Indian Food",
+        "rating": "4.5",
+        "type": "South Indian",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 18,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33zsf7c1m4nqajtwsx3",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Puffizza",
+        "rating": "4.3",
+        "type": "Pizzas, Italian, Beverages, Desserts",
+        "address": "Shahibaug",
+        "timing": "0-45 mins"
+    },
+    {
+        "id": 19,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/pkbkgopzdlellfbfch0i",
+        "price": "125 OFF ABOVE ₹249",
+        "restaurant_name": "Santushti Shakes & More",
+        "rating": "4.6",
+        "type": "Desserts, Beverages",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 20,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/8/7/cb8127a8-c1c9-4ac2-8780-f541fe1f66ff_638338.jpg",
+        "price": "20% OFF UPTO ₹50",
+        "restaurant_name": "Baked By Nini's",
+        "rating": "4.6",
+        "type": "Bakery, Desserts",
+        "address": "Paldi & Ambawadi",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 21,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/47fba9c8239a3944fc755b3cab17eb1c",
+        "price": "125 OFF ABOVE ₹249",
+        "restaurant_name": "HL Frankie",
+        "rating": "4.5",
+        "type": "Snacks, Fast Food, Beverages, Italian",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 22,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/etwzidtydqmhit6hdc5z",
+        "price": "50% OFF UPTO ₹90",
+        "restaurant_name": "Kwality Walls Frozen Dessert and Ice Cream Shop",
+        "rating": "4.6",
+        "type": "Desserts, Ice Cream, Ice Cream Cakes",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 23,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/18d8b8fb6bac8063a6fa886e20148110",
+        "price": "ITEMS AT ₹179",
+        "restaurant_name": "NIC Ice Creams",
+        "rating": "4.7",
+        "type": "Ice Cream, Desserts",
+        "address": "Navrangpura",
+        "timing": "20-25 mins"
+    },
+    {
+        "id": 24,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/97324ac91a0732497c52d37b9df563a1",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "McDonald's Gourmet Burger Collection",
+        "rating": "4.5",
+        "type": "Burgers, Beverages, Cafe, Desserts",
+        "address": "Reliance Mall",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 25,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/fa104ba112996f90724f34a80a8dbc2c",
+        "price": "50 OFF ABOVE ₹199",
+        "restaurant_name": "The Chocolate Room",
+        "rating": "4.4",
+        "type": "Mexican",
+        "address": "Bapunagar",
+        "timing": "35-40 mins"
+    },
+    {
+        "id": 26,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/isacdfxhou6xxbzg0fps",
+        "price": "50 OFF ABOVE ₹349",
+        "restaurant_name": "Jay Bhavani Vadapav",
+        "rating": "4.3",
+        "type": "Fast Food, Snacks, Chaat",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 27,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/4/87ff1fd4-8b7d-4061-9b59-994eca99139d_874541.jpg",
+        "price": "Not Define",
+        "restaurant_name": "Honest",
+        "rating": "4.4",
+        "type": "Chinese, Biryani, South Indian, Chaat, Thalis, Beverages, Italian-American",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 28,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/st2dspn0gzeixczh2s9n",
+        "price": "50 OFF ABOVE ₹199",
+        "restaurant_name": "Farki",
+        "rating": "4.7",
+        "type": "Ice Cream, Sweets, Beverages",
+        "address": "Delhi Darwaja",
+        "timing": "50-55 mins"
+    },
+    {
+        "id": 29,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/frnc9gss5pppow7lnze0",
+        "price": "125 OFF ABOVE ₹199",
+        "restaurant_name": "Al Baik Fast Food",
+        "rating": "4.5",
+        "type": "Arabian, Grill, Pizzas, Seafood, Tandoor",
+        "address": "Lal Darwaja",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 30,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/mparwfx5mpi5k3hrbc24",
+        "price": "50 OFF ABOVE ₹199",
+        "restaurant_name": "1944 - The Hocco Kitchen",
+        "rating": "4.6",
+        "type": "North Indian",
+        "address": "Navrangpura",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 31,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sj8eh6dtxlplwc5a5vl3",
+        "price": "20% OFF UPTO ₹50",
+        "restaurant_name": "Choice Snack Bar",
+        "rating": "4.6",
+        "type": "Pizzas, Chinese, South Indian, Fast Food, Street Food, American, Italian, Beverages, Desserts",
+        "address": "Navrangpura",
+        "timing": "20-25 mins"
+    },
+    {
+        "id": 32,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/lqap5wai1lwnk86iwtci",
+        "price": "Not Define",
+        "restaurant_name": "Mahalaxmi Pav Bhaji",
+        "rating": "4.6",
+        "type": "pav bhaji, Snacks",
+        "address": "Ellisbridge",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 33,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/89b52ff0c6d2d6094cce3d4c13f5945e",
+        "price": "125 OFF ABOVE ₹249",
+        "restaurant_name": "United Farmers Creamery",
+        "rating": "4.3",
+        "type": "Ice Cream, Desserts, Waffle, Beverages",
+        "address": "Navrangpura",
+        "timing": "20-25 mins"
+    },
+    {
+        "id": 34,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/fr5twemefds9jhq7vdem",
+        "price": "35% OFF",
+        "restaurant_name": "Dangee Dums",
+        "rating": "4.9",
+        "type": "Desserts, Bakery",
+        "address": "Relief Road",
+        "timing": "35-40 mins"
+    },
+    {
+        "id": 35,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/d679c532ca07a6f3fd6d89d603861412",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Gourmet Ice Cream Cakes by Baskin Robbins",
+        "rating": "4.6",
+        "type": "Ice Cream Cakes, Desserts, Ice Cream, Bakery",
+        "address": "Navrangpura",
+        "timing": "20-25 mins"
+    },
+    {
+        "id": 36,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/8b0057e3b3f57466d1b786ac7d870ad8",
+        "price": "40% OFF UPTO ₹80",
+        "restaurant_name": "Vadilal Hangout",
+        "rating": "4.7",
+        "type": "Desserts, Ice Cream",
+        "address": "Bhadra",
+        "timing": "50-55 mins"
+    },
+    {
+        "id": 37,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/pgfgm6w8mxakggklylp0",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "La Milano Pizzeria",
+        "rating": "4.4",
+        "type": "Italian, Pizzas, Mexican, Desserts, Beverages",
+        "address": "Shahibaug",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 38,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ew55nioravwgq0rujybu",
+        "price": "100 OFF ABOVE ₹599",
+        "restaurant_name": "Hocco Eatery",
+        "rating": "4.4",
+        "type": "North Indian, Pizzas",
+        "address": "Bhadra",
+        "timing": "5-50 mins"
+    },
+    {
+        "id": 39,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/3009bbcc1d9cc8851d77bd4f1e72fe94",
+        "price": "10% OFF UPTO ₹40",
+        "restaurant_name": "Bole To Vadapav",
+        "rating": "4.2",
+        "type": "Street Food",
+        "address": "Maninagar",
+        "timing": "35-40 mins"
+    },
+    {
+        "id": 40,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/7a74905b5e257a18ce1e91d6b1367b89",
+        "price": "Not Define",
+        "restaurant_name": "MMV - Mumbaiya Misal & Vadapav",
+        "rating": "4.3",
+        "type": "Maharashtrian, Fast Food, Street Food, Beverages",
+        "address": "Bhaduat Nagar",
+        "timing": "5-40 mins"
+    },
+    {
+        "id": 41,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sy8pkhfbtyzxwd2ywcd4",
+        "price": "50 OFF ABOVE ₹199",
+        "restaurant_name": "Das Khaman",
+        "rating": "4.4",
+        "type": "Snacks",
+        "address": "LalDarwaja",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 42,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/19/f2da30ae-b728-4b62-bbf8-59e3201284bb_683153.jpg",
+        "price": "30% OFF UPTO ₹75",
+        "restaurant_name": "Shambhu's Coffee Bar",
+        "rating": "4.6",
+        "type": "Beverages, Fast Food, Italian, Snacks, Waffle",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 43,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e0fd1ccbbe3ff000a35b756f7ca10264",
+        "price": "125 OFF ABOVE ₹199",
+        "restaurant_name": "New York Waffles & Dinges",
+        "rating": "4.1",
+        "type": "Waffle, Desserts, Beverages",
+        "address": "CG Road",
+        "timing": "35-40 mins"
+    },
+    {
+        "id": 44,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ezeyhbt6hucha5eae0y3",
+        "price": "Not Define",
+        "restaurant_name": "Monginis",
+        "rating": "4.3",
+        "type": "Bakery, Desserts",
+        "address": "Maninagar",
+        "timing": "5-50 mins"
+    },
+    {
+        "id": 45,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/8/19/c558f014-afe5-43a7-b599-80ecfb35e945_668682.jpg",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "McCafe by McDonald's",
+        "rating": "4.2",
+        "type": "Beverages, Desserts",
+        "address": "Reliance Mall",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 46,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/pwspcn3q0l0kfyvwpnlm",
+        "price": "Not Define",
+        "restaurant_name": "Shakti - The Sandwich Shop",
+        "rating": "4.1",
+        "type": "Fast Food, Pizzas",
+        "address": "Ellis Bridge",
+        "timing": "20-25 mins"
+    },
+    {
+        "id": 47,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c583ca6ce40b426797a78ae2ac91f2ec",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Faasos' Signature Wraps & Rolls",
+        "rating": "4.5",
+        "type": "Fast Food, Snacks, North Indian, Desserts, Beverages",
+        "address": "CG Road RK",
+        "timing": "35-40 mins"
+    },
+    {
+        "id": 48,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/23/abb8a1dc-ff69-4d04-b0a4-bf01b06b3156_631652.JPG",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Go Zero Ice Creams & Desserts",
+        "rating": "4.2",
+        "type": "Ice Cream, Desserts, Healthy Food",
+        "address": "NAVRANGPURA",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 49,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/4ef8c6c6d8e5fc7de3149cef85726e77",
+        "price": "30% OFF UPTO ₹75",
+        "restaurant_name": "Tea Post",
+        "rating": "4.7",
+        "type": "Indian, Beverages, Snacks",
+        "address": "C G Road",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 50,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/22/30548ac4-2e57-4c1d-ba73-8372f74a1ad2_636895.JPG",
+        "price": "ITEMS AT ₹169",
+        "restaurant_name": "Big Bowl",
+        "rating": "4.3",
+        "type": "North Indian, Chinese, Tibetan, Desserts",
+        "address": "CG Road",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 51,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/wcg2p6ikhcvofp0ixug6",
+        "price": "ITEMS AT ₹99",
+        "restaurant_name": "Grameen Kulfi",
+        "rating": "4",
+        "type": "Ice Cream, Desserts",
+        "address": "Navrangpura",
+        "timing": "20-25 mins"
+    },
+    {
+        "id": 52,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/oktmnhuiemzszql5wihf",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Momoman",
+        "rating": "4.3",
+        "type": "Chinese, Beverages",
+        "address": "C G road",
+        "timing": "0-35 mins"
+    },
+    {
+        "id": 53,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/6d30adc4403bb25931e9c37fb43a35ee",
+        "price": "40% OFF UPTO ₹75",
+        "restaurant_name": "Vital Bowls - Salads & more",
+        "rating": "4.3",
+        "type": "Healthy Food, Salads, Beverages, Keto",
+        "address": "CG Road RK",
+        "timing": "0-35 mins"
+    },
+    {
+        "id": 54,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/nh202kbfpocizdm50jlq",
+        "price": "25% OFF UPTO ₹65",
+        "restaurant_name": "Mom's Kitchen",
+        "rating": "4.5",
+        "type": "Chinese, North Indian",
+        "address": "Maninagar",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 55,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/28/9fc001fb-6bc1-4255-9f78-59b873c2e517_37934.JPG",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Faasos - Wraps, Rolls & Shawarma",
+        "rating": "4.7",
+        "type": "Kebabs, Fast Food, Snacks, American, Healthy Food, Desserts, Beverages",
+        "address": "CG Road RK",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 56,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f1aa621021a2826088089b89842d4e7c",
+        "price": "30% OFF UPTO ₹75",
+        "restaurant_name": "Wendy's Flavor Fresh Burgers",
+        "rating": "4.4",
+        "type": "Burgers, American, Fast Food, Snacks, Beverages",
+        "address": "CG Road RK",
+        "timing": "35-40 mins"
+    },
+    {
+        "id": 57,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/8/12/49acab69-8eda-48e6-b387-5167e896ff27_636073.jpg",
+        "price": "20% OFF UPTO ₹50",
+        "restaurant_name": "The Betel Leaf Co - PAAN Originally from Bangalore",
+        "rating": "4.5",
+        "type": "Paan, Desserts",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 58,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/qaz28nj8qbbantl9livb",
+        "price": "10% OFF UPTO ₹40",
+        "restaurant_name": "Shreeji Krupa",
+        "rating": "4.5",
+        "type": "Snacks, Beverages",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 59,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/26/0e879597-1d27-48f9-b4f5-26f8d6c49248_348290.jpg",
+        "price": "125 OFF ABOVE ₹199",
+        "restaurant_name": "The Poutinerie",
+        "rating": "4.3",
+        "type": "Burgers, Coffee, Fast Food, Snacks, Beverages",
+        "address": "H L Road",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 60,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/0dd528cae731e50b432dfd410f85083e",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Uboat - Gourmet Subs",
+        "rating": "4.2",
+        "type": "Fast Food, Salads, Snacks",
+        "address": "Navrangpura",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 61,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/12/96504ada-05ca-471b-b2c9-eeb1d6e9f905_37996.jpg",
+        "price": "50% OFF UPTO ₹95",
+        "restaurant_name": "Vittle Box",
+        "rating": "4.2",
+        "type": "North Indian, Chinese, Continental, Italian, Healthy Food, Thalis, Beverages, Desserts",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 62,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c583da4b69d264ffe705e5918fad0e98",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Makhani Darbar",
+        "rating": "4.2",
+        "type": "Biryani, North Indian, Kebabs, Mughlai, Beverages, Desserts",
+        "address": "SV Desai Marg",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 63,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/2b579171cefc545ce6479e21c0016798",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Veg Daawat by Behrouz",
+        "rating": "4.1",
+        "type": "Biryani, North Indian, Kebabs, Mughlai, Beverages, Desserts",
+        "address": "CG Road RK",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 64,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/9668a5819fcba35364dcff30d5f5cfbb",
+        "price": "ITEMS AT ₹189",
+        "restaurant_name": "The Momo Co.",
+        "rating": "4.6",
+        "type": "Chinese, Asian, Tibetan, Desserts",
+        "address": "CG Road",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 65,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e14931c66de0802195b1e69707a78027",
+        "price": "125 OFF ABOVE ₹199",
+        "restaurant_name": "Starboy Pizza & Shakes",
+        "rating": "3.8",
+        "type": "Pizzas, Beverages",
+        "address": "CG Road",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 66,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/rvlovv49uh3bqyrzb9mr",
+        "price": "150 OFF ABOVE ₹249",
+        "restaurant_name": "Urban Khichdi",
+        "rating": "4.6",
+        "type": "Indian",
+        "address": "Vastrapur",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 67,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/apmxseb2crnnpxnshi7b",
+        "price": "50% OFF UPTO ₹100",
+        "restaurant_name": "Cakes N Bakes",
+        "rating": "4.3",
+        "type": "Desserts, Bakery",
+        "address": "Gulbai Tekra",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 68,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/12/10806cb7-3aa1-4942-9e37-62a94c62ab15_47800.jpg",
+        "price": "50 OFF ABOVE ₹199",
+        "restaurant_name": "Jashuben Shah Old Pizza",
+        "rating": "4.4",
+        "type": "Pizzas, Fast Food, Snacks",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 69,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/6/7198a886-be2b-44f1-8966-b061fd89c004_904220.JPG",
+        "price": "Not Define",
+        "restaurant_name": "Cafe Delight",
+        "rating": "4.6",
+        "type": "Beverages, Burgers, Snacks",
+        "address": "Navrangpura",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 70,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/cvixuieqe08gqcnl33mi",
+        "price": "151 OFF ABOVE ₹299",
+        "restaurant_name": "Tummy Fillers",
+        "rating": "4.6",
+        "type": "Burgers, Fast Food, Snacks",
+        "address": "Navrangpura",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 71,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ac0mnersbdeevbwf0zb1",
+        "price": "Not Define",
+        "restaurant_name": "Baker's Den",
+        "rating": "4.3",
+        "type": "Bakery",
+        "address": "Ahmedabad",
+        "timing": "0-35 mins"
+    },
+    {
+        "id": 72,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/iotn3wkvhwnyb2m8bugn",
+        "price": "50 OFF ABOVE ₹199",
+        "restaurant_name": "Gita Samosa Centre",
+        "rating": "4.2",
+        "type": "Fast Food, Snacks",
+        "address": "Navrangpura",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 73,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/93ea186cb2095dc9b71e96ac57be4b1a",
+        "price": "125 OFF ABOVE ₹199",
+        "restaurant_name": "9834 The Fruit Truck",
+        "rating": "4.5",
+        "type": "Juices, Beverages, Desserts, Healthy Food",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 74,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/8/15/e8d2f7ae-d461-4058-8330-bf2731126af4_942244.JPG",
+        "price": "Not Define",
+        "restaurant_name": "Crazy Cheesy",
+        "rating": "4.5",
+        "type": "Italian, Pizzas, Fast Food, Burgers",
+        "address": "Navrangpura",
+        "timing": "30-35 mins"
+    },
+    {
+        "id": 75,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/8/5/1e1cb548-1233-4a90-8514-867bdf2319ce_937222.jpg",
+        "price": "Not Define",
+        "restaurant_name": "Huber & Holly",
+        "rating": "4.7",
+        "type": "Desserts, Ice Cream, Ice Cream Cakes",
+        "address": "Navrangpura",
+        "timing": "25-30 mins"
+    },
+    {
+        "id": 76,
+        "img_url": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/6/3/6c23f86c-8b57-47ae-9660-2ff0fad99fee_762592.JPG",
+        "price": "30% OFF UPTO ₹75",
+        "restaurant_name": "Starbucks Coffee",
+        "rating": "4.6",
+        "type": "Beverages, Cafe, Snacks, Desserts, Bakery, Ice Cream",
+        "address": "Majestic Law Garden",
+        "timing": "25-30 mins"
+    }
+]

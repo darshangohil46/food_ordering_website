@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "code": "SUMMER24",
+        "discount_percentage": 20,
+        "expiration_date": "2024-09-30T08:30:05Z",
+        "is_active": true
+    }
+]
