@@ -176,12 +176,13 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+
 # fill up these details
-EMAIL_HOST_USER = "your_email_id@gmail.com"
-EMAIL_HOST_PASSWORD = "your_password_after_2_step_verication"
-DEFAULT_FROM_EMAIL = "your_email_id@gmail.com"
+EMAIL_HOST_USER = "12a15darshangohil@gmail.com"
+EMAIL_HOST_PASSWORD = "pzqa uhuk oldo ydob"
+DEFAULT_FROM_EMAIL = "12a15darshangohil@gmail.com"
 
 
-TWILIO_ACCOUNT_SID = "twillo_acc_sid"
-TWILIO_AUTH_TOKEN = "twillo_auth_token"
-TWILIO_PHONE_NUMBER = "twill_number"
+TWILIO_ACCOUNT_SID = "ACfe261633aa14fc0d1a4fac2411921404"
+TWILIO_AUTH_TOKEN = "7f16178a1e4fb82f9a188315f0e6544a"
+TWILIO_PHONE_NUMBER = "+18626844366"
