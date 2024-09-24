@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import logo from './../logo.jpg'
 import axios from 'axios';
 import API_BASE_URL from '../config';
+import { useNavigate } from 'react-router-dom';
+
 
 axios.defaults.withCredentials = true;
 
 export default function Website() {
+    const navigate = useNavigate();
+    const [isAdmin, setIsAdmin] = useState(false)
+    useEffect(() => {
+        axios
+            .get("http://localhost:8000/api/admin-orders/", {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                withCredentials: true,
+            })
+            .then((response) => {
+                setIsAdmin(response.data.is_admin);
+            })
+            .catch((error) => {
+                console.error("Error fetching order data:", error);
+                setIsAdmin(false);
+            });
+    }, []);
 
     return (
         <div>
@@ -90,10 +110,14 @@ export default function Website() {
                     <p style={{ marginTop: '1.5rem', paddingLeft: '5%', paddingRight: '5%', color: "#ff7533" }}>
                         By continuing past this page, you agree to our <Link to="/terms" style={{ textDecoration: 'underline', color: "#ff7533" }}>Terms of Service</Link>, <Link to="/privacy" style={{ textDecoration: 'underline', color: "#ff7533" }}>Privacy Policy</Link>, and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Foodie™ Ltd. All rights reserved.
                     </p>
+
+                    <div>
+                        {isAdmin &&
+                            <button type="button" className="btn btn-warning w-100" onClick={() => navigate("/admin_page")}>Go to Admin Page</button>
+                        }
+                    </div>
                 </div>
-
             </footer>
-
         </div>
     )
 }

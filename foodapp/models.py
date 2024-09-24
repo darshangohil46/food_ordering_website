@@ -185,6 +185,8 @@ class FinalOrder(models.Model):
     discount = models.CharField(max_length=15)
     address = models.CharField(max_length=15)
     quantity = models.IntegerField(default=1, blank=True)
+    last_updated = models.DateTimeField(default=timezone.now)
+    complete = models.BooleanField(default=False)  # Status of the order
 
     def __str__(self):
         return f"ID: {self.id} Total pay: {self.amount*self.quantity} :: {self.amount} {self.order_id} - {self.user}"

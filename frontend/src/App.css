@@ -179,7 +179,8 @@
     }
 }
 
-.home-page {
+.home-page,
+.admin-page {
     padding-top: 0px;
 }
 

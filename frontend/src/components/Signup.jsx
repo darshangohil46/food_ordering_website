@@ -32,7 +32,18 @@ export default function Signup() {
 
 
   // send api data to django
-  const sendDataDjango = async () => {
+  const sendDataDjango = async (e) => {
+    e.preventDefault();
+    const { firstName, lastName, email, address } = formData;
+
+
+    // Check if all required fields are filled
+    if (!firstName || !lastName || !email || !address) {
+      setErrorMessage('Please fill in all required fields.');
+      alert("Please fill in all required fields.")
+      return;
+    }
+
     if (!validatePhoneNumber(formData.phone)) {
       setErrorMessage('Please enter a valid 10-digit phone number.');
       return;
@@ -46,7 +57,7 @@ export default function Signup() {
         const modal = document.getElementById('signupModal');
         const modalInstance = window.bootstrap.Modal.getInstance(modal);
         modalInstance.hide();
-        alert("Registration done");
+        alert("Registration done. Now, You can Login");
       }
     } catch (error) {
       // setErrorMessage('There was an error processing your request.');
@@ -57,11 +68,11 @@ export default function Signup() {
 
   // for check phone number
   const handleSubmit = async () => {
-
     if (!validatePhoneNumber(formData.phone)) {
       setErrorMessage('Please enter a valid 10-digit phone number.');
       return;
     }
+
     setLoading(true); // Show spinner when form is submitted
 
     try {
@@ -69,6 +80,8 @@ export default function Signup() {
         phone: formData.phone,
         type: "signup"
       });
+      console.log(formData.phone);
+
 
       if (response.data.status !== "success") {
         setErrorMessage(response.data.message);
@@ -79,6 +92,7 @@ export default function Signup() {
       }
     } catch (error) {
       // setErrorMessage('There was an error processing your request.');
+      setErrorMessage(error.response.data.message)
       console.error('API Error:', error.response ? error.response.data : error.message);
     } finally {
       setLoading(false); // Hide spinner after processing

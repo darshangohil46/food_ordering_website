@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from "./Home";
 import Menu from "./Menu";
@@ -17,11 +17,29 @@ import axios from 'axios';
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 import API_BASE_URL from '../config';
+import AdminOrders from "./Admin";
 
 
 axios.defaults.withCredentials = true;
 
 export default function Website() {
+    const [isAdmin, setIsAdmin] = useState(false)
+    useEffect(() => {
+        axios
+            .get("http://localhost:8000/api/admin-orders/", {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                withCredentials: true,
+            })
+            .then((response) => {
+                setIsAdmin(response.data.is_admin);
+            })
+            .catch((error) => {
+                console.error("Error fetching order data:", error);
+                setIsAdmin(false);
+            });
+    }, []);
 
     return (
         <div>
@@ -105,6 +123,19 @@ export default function Website() {
                             <Footer />
                         </div>
                     } />
+
+
+                    {isAdmin &&
+                        <Route path="/admin_page" element={
+                            <div className="other-page admin-page">
+                                {/* <Navbar /> */}
+                                <AdminOrders />
+                                <Footer />
+                            </div>
+                        } />
+                    }
+
+
                     <Route path="*" element={
                         <div className="">
                             <NoPage />

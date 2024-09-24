@@ -54,3 +54,7 @@ urlpatterns += [
     path("api/review/", ReviewAPIView.as_view(), name="get-review"),
     path("api/review-submit/", submit_review, name="submit_review"),
 ]
+urlpatterns += [
+    path("api/admin-orders/", admin_orders, name="admin-orders"),
+    path("api/delete-order/", delete_order, name="admin-orders"),
+]

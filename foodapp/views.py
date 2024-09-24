@@ -853,3 +853,51 @@ def decrease_quantity(request, cart_item_id):
     return JsonResponse(
         {"status": "error", "message": "Invalid request method"}, status=400
     )
+
+
+# for admin site show all admin data
+def admin_orders(request):
+    if request.user.is_authenticated and request.user.is_admin:
+        orders = FinalOrder.objects.filter(complete=False).order_by("-last_updated")
+        data = [
+            {
+                "id": order.id,
+                "user": order.user.my_username,
+                "order_id": order.order_id,
+                "name": order.name,
+                "email": order.email,
+                "phone": order.phone,
+                "amount": float(order.amount),
+                "quantity": order.quantity,
+                "order_details": order.order_details,
+                "discount": order.discount,
+                "address": order.address,
+            }
+            for order in orders
+        ]
+        return JsonResponse({"orders": data, "is_admin": True}, status=200)
+    return JsonResponse({"error": "Unauthorized access"}, status=403)
+
+
+# set complete as true in Finalorder
+@csrf_exempt
+def delete_order(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body)
+            id = data.get("order_id")
+            print(id)
+            order = FinalOrder.objects.get(id=id, complete=False)
+            order.ordered = True
+            order.save()
+            return JsonResponse(
+                {"status": "success", "message": "Order deleted successfully"},
+                status=200,
+            )
+        except FinalOrder.DoesNotExist:
+            return JsonResponse(
+                {"status": "error", "message": "Order not found"}, status=404
+            )
+    return JsonResponse(
+        {"status": "error", "message": "Invalid request method"}, status=400
+    )
