@@ -49,8 +49,10 @@
     background-color: #f1f1f1;
 }
 
+
+/* carousel */
 .carousel-item img {
-    max-height: 400px;
+    max-height: 100vh;
     object-fit: cover;
     margin: 0 auto;
 }
@@ -58,7 +60,6 @@
 .carousel_details {
     background-color: rgba(168, 165, 165, 0.5);
     border-radius: 10px;
-
 }
 
 .nav-link.active {
@@ -160,8 +161,7 @@
     color: #ff9900;
 }
 
-body,
-.main-content {
+.other-page {
     padding-top: 88px;
 }
 
@@ -170,4 +170,36 @@ body,
     .third_navbar {
         display: none;
     }
+}
+
+/* only show in mobile */
+@media (min-width: 1023px) {
+    .navbar_icon {
+        display: none;
+    }
+}
+
+.home-page {
+    padding-top: 0px;
+}
+
+
+.images_button_container {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-left: 20px; */
+
+    position: absolute;
+    left: 20px;
+    top: 85%;
+    transform: translateY(-50%);
+}
+
+.img_button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
 }

@@ -89,95 +89,130 @@ export default function Navbar() {
             <Signin />
             <Signup />
 
-            {/* Navbar, */}
-            <nav id="navbar" className="navbar-container">
-                <div className="container">
-                    {/* header */}
-                    <header className="border-bottom">
-                        <div className="row flex-no wrap justify-content-between align-items-center">
-                            <div className="col-3">
-                                {/* sign in page */}
-                                {!login && (
-                                    <>
-                                        <button type="button" className="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#loginModal">
-                                            Sign in
+
+
+            {/* Navbarn if login not complete */}
+            {!login &&
+                <>
+                    <nav id="navbar" className="navbar-container">
+                        <div className="container">
+                            {/* header */}
+                            <header className="border-bottom">
+                                <div className="row align-items-center">
+                                    <div className="col-4 d-flex justify-content-start">
+                                        {/* sign in page */}
+                                        <>
+                                            <button type="button" className="btn btn-outline-warning text-dark bg-warning" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                                Sign in
+                                            </button>
+                                        </>
+                                    </div>
+                                    <div className="col-4 pt-2 text-center">
+                                        <Link className="text-body-emphasis text-decoration-none" to="/" style={{ fontFamily: "Playfair Display", fontSize: '2.25rem' }}>
+                                            <p className="foodie" style={{ fontFamily: "'Protest Guerrilla', sans-serif", }}>
+                                                Foodie
+                                            </p>
+                                        </Link>
+                                    </div>
+                                    <div className="col-4 d-flex justify-content-end align-items-center">
+                                        {/* sign up page */}
+                                        <button type="button" className="btn btn-outline-warning text-dark bg-warning" data-bs-toggle="modal" data-bs-target="#signupModal">
+                                            Sign up
                                         </button>
-                                    </>
-                                )}
-                                {login && (
-                                    <>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                    </nav>
+                </>
+            }
+
+            {login &&
+                <>
+                    {/* Navbarn if login done */}
+                    <nav id="navbar" className="navbar-container">
+                        <div className="container">
+                            {/* header */}
+                            <header className="border-bottom">
+                                <div className="row flex-no wrap justify-content-between align-items-center">
+                                    <div className="col-3 navbar_icon">
                                         <button onClick={toggleSidebar} className="btn nav_bar_icon">
                                             <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
                                         </button>
-                                    </>
-                                )}
-                            </div>
-                            <div className="col-2 pt-2">
-                                <Link className="text-body-emphasis text-decoration-none" to="/" style={{ fontFamily: "Playfair Display", fontSize: '2.25rem' }}>
-                                    <p className="foodie" style={{ fontFamily: "'Protest Guerrilla', sans-serif", }}>
-                                        Foodie
-                                    </p>
-                                </Link>
-                            </div>
-                            <div className="col-7 d-flex justify-content-end align-items-center">
-                                {/* sign up page */}
-                                {!login && (
-                                    <>
-                                        <button type="button" className="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#signupModal">
-                                            Sign up
-                                        </button>
-                                    </>
-                                )}
+                                    </div>
+                                    <div className="col-2 pt-2">
+                                        <Link className="text-body-emphasis text-decoration-none" to="/" style={{ fontFamily: "Playfair Display", fontSize: '2.25rem' }}>
+                                            <p className="foodie" style={{ fontFamily: "'Protest Guerrilla', sans-serif", }}>
+                                                Foodie
+                                            </p>
+                                        </Link>
+                                    </div>
+                                    <div className="col-7 d-flex justify-content-end align-items-center">
+                                        {/* if loged in then... */}
+                                        {login &&
+                                            <>
+                                                <nav className="third_navbar">
+                                                    <ul className="nav ">
+                                                        {/* Home Icon */}
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" href="/">
+                                                                <i className="fas fa-home"></i>
+                                                            </a>
+                                                        </li>
 
-                                {/* if loged in then... */}
-                                {login &&
-                                    <>
-                                        <nav className="third_navbar">
-                                            <ul className="nav ">
-                                                {/* Home Icon */}
-                                                <li className="nav-item">
-                                                    <a className="nav-link" href="/">
-                                                        <i className="fas fa-home"></i>
-                                                    </a>
-                                                </li>
+                                                        {/* Menu Icon */}
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" href="/menu">
+                                                                <i className="fas fa-utensils"></i>
+                                                            </a>
+                                                        </li>
 
-                                                {/* Menu Icon */}
-                                                <li className="nav-item">
-                                                    <a className="nav-link" href="/menu">
-                                                        <i className="fas fa-utensils"></i>
-                                                    </a>
-                                                </li>
+                                                        {/* Cart icon */}
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" href="/cart">
+                                                                <i className="fas fa-shopping-cart"></i>
+                                                            </a>
+                                                        </li>
 
-                                                {/* Cart icon */}
-                                                <li className="nav-item">
-                                                    <a className="nav-link" href="/cart">
-                                                        <i className="fas fa-shopping-cart"></i>
-                                                    </a>
-                                                </li>
+                                                        {/* Account Icon */}
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" href="/account">
+                                                                <i className="fas fa-user"></i>
+                                                            </a>
+                                                        </li>
 
-                                                {/* Account Icon */}
-                                                <li className="nav-item">
-                                                    <a className="nav-link" href="/account">
-                                                        <i className="fas fa-user"></i>
-                                                    </a>
-                                                </li>
+                                                        {/* Contact Us Icon */}
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" href="/contactus">
+                                                                <i className="fas fa-envelope"></i>
+                                                            </a>
+                                                        </li>
 
-                                                {/* Contact Us Icon */}
-                                                <li className="nav-item">
-                                                    <a className="nav-link" href="/contactus">
-                                                        <i className="fas fa-envelope"></i>
-                                                    </a>
-                                                </li>
+                                                        {/* review Icon */}
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" href="/review">
+                                                                <i className="fas fa-star"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" onClick={userLogout}>
+                                                                <i className="fas fa-sign-out-alt"></i>
+                                                            </a>
+                                                        </li>
 
-                                            </ul>
-                                        </nav>
-                                    </>
-                                }
-                            </div>
+                                                    </ul>
+                                                </nav>
+                                            </>
+                                        }
+                                    </div>
+                                </div>
+                            </header>
                         </div>
-                    </header>
-                </div>
-            </nav>
+                    </nav>
+
+                </>
+            }
+
 
             {/* left side bar */}
             <div>

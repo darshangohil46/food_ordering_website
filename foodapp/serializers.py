@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import FoodItem, Carousel, Menu, DiscountCoupon, Cart, Review
+from .models import *
 
 
 class FoodItemSerializer(serializers.ModelSerializer):

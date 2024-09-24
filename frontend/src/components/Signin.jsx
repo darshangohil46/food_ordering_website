@@ -4,13 +4,11 @@ import API_BASE_URL from '../config';
 
 
 function Signin() {
-
     const [formData, setFormData] = useState({ phone: '', otp: '' });
     const [showOtpInput, setShowOtpInput] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [showButton, setShowButton] = useState(true);
     const [loading, setLoading] = useState(false); // Add loading state
-
 
     // save in use state
     const handleInputChange = (e) => {
@@ -26,7 +24,6 @@ function Signin() {
 
     // when submit
     const handleSubmit = async () => {
-
         if (!validatePhoneNumber(formData.phone)) {
             setErrorMessage('Please enter a valid 10-digit phone number.');
             return;
@@ -41,13 +38,12 @@ function Signin() {
             console.log('OTP Response is:', response.data);
 
             if (response.data.status === "success") {
-                setShowOtpInput(true); // Show OTP input if phone exists
-                setErrorMessage(); // Clear any previous error messages
+                setShowOtpInput(true);
+                setErrorMessage();
             } else {
                 setErrorMessage('Phone number not found. Please sign up.');
             }
         } catch (error) {
-            // Check if error response exists and log appropriately
             if (error.response) {
                 console.error('API Error:', error.response.data);
                 setErrorMessage(error.response.data.message || 'There was an error processing your request.');
@@ -60,7 +56,6 @@ function Signin() {
         }
         setShowButton(false);
     };
-
 
     const handleOtpSubmit = async () => {
         try {
@@ -134,6 +129,7 @@ function Signin() {
                                     required
                                     placeholder="Enter OTP"
                                 />
+                                <p>OTP valid for only 2 minutes</p>
                                 <button type="button" className="btn btn-link" onClick={handleResendOtp}>
                                     Resend OTP
                                 </button>

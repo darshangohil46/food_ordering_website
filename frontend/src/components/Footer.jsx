@@ -85,12 +85,13 @@ export default function Website() {
                             </ul>
                         </div>
                     </div>
+
+                    <hr />
+                    <p style={{ marginTop: '1.5rem', paddingLeft: '5%', paddingRight: '5%', color: "#ff7533" }}>
+                        By continuing past this page, you agree to our <Link to="/terms" style={{ textDecoration: 'underline', color: "#ff7533" }}>Terms of Service</Link>, <Link to="/privacy" style={{ textDecoration: 'underline', color: "#ff7533" }}>Privacy Policy</Link>, and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Foodie™ Ltd. All rights reserved.
+                    </p>
                 </div>
 
-                <hr />
-                <p style={{ marginTop: '1.5rem', paddingLeft: '5%', paddingRight: '5%', color: "#ff7533" }}>
-                    By continuing past this page, you agree to our <Link to="/terms" style={{ textDecoration: 'underline', color: "#ff7533" }}>Terms of Service</Link>, <Link to="/privacy" style={{ textDecoration: 'underline', color: "#ff7533" }}>Privacy Policy</Link>, and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Foodie™ Ltd. All rights reserved.
-                </p>
             </footer>
 
         </div>

@@ -16,6 +16,7 @@ export default function Home() {
         axios.get(`${API_BASE_URL}/carousel/`)
             .then(response => {
                 setItems(response.data);
+                console.log(response.data);
             })
             .catch(error => {
                 console.error("There was an error fetching carousel data!", error);
@@ -33,6 +34,9 @@ export default function Home() {
             });
     }, []);
 
+
+    // State to hold image URLs from the API
+
     return (
         <>
             {/* picture and description */}
@@ -40,7 +44,11 @@ export default function Home() {
                 <div className="carousel-inner">
                     {items.map((item, index) => (
                         <div key={index} className={`carousel-item${index === 0 ? ' active' : ''}`}>
-                            <img src={item.imageUrl} className="d-block w-100" alt={item.title} />
+                            <img
+                                src={item.imageUrl}
+                                className="d-block"
+                                style={{ height: "100%", objectFit: "cover", width: "100%" }}
+                                alt={item.title} />
                             <div className="carousel-caption d-none d-md-block carousel_details">
                                 <h5>{item.title}</h5>
                                 <p>{item.description}</p>
@@ -87,12 +95,8 @@ const FoodCard = ({ category, title, special, description, imageUrl }) => {
                     <h3 className="mb-0">{title}</h3>
                     <div className="mb-1 text-body-secondary">{special}</div>
                     <p className="card-text mb-auto">{description}</p>
-                    {/* <a href="/" className="icon-link gap-1 icon-link-hover stretched-link">
-                        Explore
-                        <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
-                    </a> */}
                 </div>
-                <div className="col-auto d-none d-lg-block">
+                <div className="col-auto d-none d-sm-block">
                     <img src={imageUrl} alt={title} className="bd-placeholder-img" width="200" height="250" />
                 </div>
             </div>

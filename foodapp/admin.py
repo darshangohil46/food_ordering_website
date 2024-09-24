@@ -9,7 +9,7 @@ admin.site.register(UserDataSet)
 admin.site.register(Menu)
 admin.site.register(DiscountCoupon)
 admin.site.register(Cart)
-admin.site.register(PendingOrder)
+admin.site.register(FinalOrder)
 admin.site.register(Review)
 
 

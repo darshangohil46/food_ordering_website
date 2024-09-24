@@ -8,6 +8,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 
 # Create your models here.
 
@@ -36,10 +38,8 @@ class Menu(models.Model):
     img_url = models.URLField(max_length=500)
     price = models.CharField(max_length=100)
     restaurant_name = models.CharField(max_length=255)
-    rating = models.CharField(max_length=10)
     type = models.CharField(max_length=255)
     address = models.TextField()
-    timing = models.CharField(max_length=50)
 
     def __str__(self):
         return f"{self.restaurant_name} - {self.type}"
@@ -58,12 +58,46 @@ class DiscountCoupon(models.Model):
         return self.is_active and self.expiration_date > timezone.now()
 
 
+# class Pizza(models.Model):
+#     img_url = models.URLField(max_length=500)
+#     price = models.CharField(max_length=100)
+#     restaurant_name = models.CharField(max_length=255)
+#     type = models.CharField(max_length=255)  # e.g., 'Pizza'
+#     address = models.TextField()
+
+#     def __str__(self):
+#         return f"{self.restaurant_name} - {self.type}"
+
+
+# class Burger(models.Model):
+#     img_url = models.URLField(max_length=500)
+#     price = models.CharField(max_length=100)
+#     restaurant_name = models.CharField(max_length=255)
+#     type = models.CharField(max_length=255)  # e.g., 'Burger'
+#     address = models.TextField()
+
+#     def __str__(self):
+#         return f"{self.restaurant_name} - {self.type}"
+
+
+# class Other(models.Model):
+#     img_url = models.URLField(max_length=500)
+#     price = models.CharField(max_length=100)
+#     restaurant_name = models.CharField(max_length=255)
+#     type = models.CharField(max_length=255)  # e.g., 'Other'
+#     address = models.TextField()
+
+#     def __str__(self):
+#         return f"{self.restaurant_name} - {self.type}"
+
+
 class Cart(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     cart_details = models.JSONField()  # Store cart items in JSON format
     ordered = models.BooleanField(default=False)  # Status of the order
     last_updated = models.DateTimeField(auto_now=True)  # Auto update on every save
     email = models.EmailField()  # User's email
+    quantity = models.IntegerField(default=1)
 
     def __str__(self):
         return f"Cart for {self.id} ({self.user.my_username}) {self.user.first_name} {self.user.last_name} {self.user.phone} - [{'Ordered' if self.ordered else 'Pending'}] {self.last_updated}"
@@ -125,7 +159,9 @@ class UserDataSet(AbstractBaseUser):
     REQUIRED_FIELDS = ["first_name", "last_name", "email", "address", "my_username"]
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} {self.id} (Is Admin: {self.is_admin})"
+        return (
+            f"{self.first_name} {self.last_name} {self.id} (Is Admin: {self.is_admin})"
+        )
 
     def has_perm(self, perm, obj=None):
         return True
@@ -138,7 +174,7 @@ class UserDataSet(AbstractBaseUser):
         return self.is_admin
 
 
-class PendingOrder(models.Model):
+class FinalOrder(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     order_details = models.JSONField()
     order_id = models.CharField(max_length=100)
@@ -148,9 +184,10 @@ class PendingOrder(models.Model):
     phone = models.CharField(max_length=15)
     discount = models.CharField(max_length=15)
     address = models.CharField(max_length=15)
+    quantity = models.IntegerField(default=1, blank=True)
 
     def __str__(self):
-        return f"{self.id} Payment {self.amount} {self.order_id} - {self.user} {self.user.id} {self.phone}"
+        return f"ID: {self.id} Total pay: {self.amount*self.quantity} :: {self.amount} {self.order_id} - {self.user}"
 
 
 class Review(models.Model):

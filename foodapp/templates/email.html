@@ -13,6 +13,7 @@
       }
       .email-container {
         width: 100%;
+        max-width: 600px;
         margin: 0 auto;
         padding: 20px;
         background-color: #ffffff;
@@ -40,6 +41,7 @@
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
+        table-layout: auto;
       }
       .order-details table,
       th,
@@ -48,8 +50,9 @@
       }
       th,
       td {
-        padding: 15px;
+        padding: 12px;
         text-align: left;
+        word-wrap: break-word;
       }
       .total {
         font-weight: bold;
@@ -88,27 +91,23 @@
             <th>Restaurant Name</th>
             <th>Item Name</th>
             <th>Price</th>
-            <th>Quantity</th>
           </tr>
           <tr>
             <td>{{ order_details.name }}</td>
             <td>{{ order_details.type }}</td>
-            <td>{{ order_details.price }}</td>
-            <td>{{ order_details.quantity }}</td>
+            <td>₹{{ order_details.price }}</td>
           </tr>
         </table>
         <table>
           <tr>
-            <th>Restaurant at</th>
-            <th>Timing</th>
-            <th>Rating</th>
-            <th>Price</th>
+            <th>Quantity</th>
+            <th>Restaurant Address</th>
+            <th>Total</th>
           </tr>
           <tr>
+            <td>{{ quantity }}</td>
             <td>{{ order_details.address }}</td>
-            <td>{{ order_details.timing }}</td>
-            <td>{{ order_details.rating }}</td>
-            <td>{{ total_amount }}</td>
+            <td>₹{{ order_details.price }} X {{ quantity }} = {{ order_details.price * quantity }}</td>
           </tr>
         </table>
 

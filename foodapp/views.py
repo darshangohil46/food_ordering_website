@@ -15,6 +15,7 @@ from datetime import timedelta
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from rest_framework.decorators import api_view
+from django.shortcuts import get_object_or_404
 
 
 from twilio.rest import Client
@@ -22,13 +23,7 @@ from django.utils import timezone
 
 User = get_user_model()
 
-
 import json, random, re
-
-
-# from django.contrib.sessions.backends.db import SessionStore
-# from django.contrib.sessions.models import Session
-
 
 # Create your views here.
 from rest_framework.views import APIView
@@ -38,28 +33,12 @@ from django.views import View
 from django.utils.decorators import method_decorator
 
 
-from .serializers import (
-    FoodItemSerializer,
-    CarouselItemSerializer,
-    MenuItemSerializer,
-    DiscountItemSerializer,
-    CartItemSerializer,
-    ReviewSerializer,
-)
+from .serializers import *
 from rest_framework import status
-
+from django.views.decorators.http import require_http_methods
 
 # import models
-from .models import (
-    FoodItem,
-    Carousel,
-    Menu,
-    DiscountCoupon,
-    UserDataSet,
-    Cart,
-    PendingOrder,
-    Review,
-)
+from .models import *
 
 
 otp_signup = None
@@ -145,19 +124,17 @@ class ReviewAPIView(APIView):
         return Response(serializer.data)
 
 
+# (done) for submit user rivew for website
 @csrf_exempt
 def submit_review(request):
     if request.method == "POST":
         try:
             data = json.loads(request.body)
-            print(data, "gkukgkbekvevfejvbjxslshahnjekdekdqwd")
             user_id = data.get("user")
             if not user_id:
                 return JsonResponse(
                     {"status": "error", "message": "User ID is required"}, status=400
                 )
-
-            # Retrieve user from the UserDataSet model
             try:
                 user = UserDataSet.objects.get(id=user_id)
             except UserDataSet.DoesNotExist:
@@ -177,17 +154,12 @@ def submit_review(request):
                     },
                     status=400,
                 )
-
-            # Create and save the new review
             review = Review(user=user, rating=rating, review_text=review_text)
             review.save()
-
-            # Return a success response
             return JsonResponse(
                 {"status": "success", "message": "Review submitted successfully"},
                 status=201,
             )
-
         except json.JSONDecodeError:
             return JsonResponse(
                 {"status": "error", "message": "Invalid JSON format"}, status=400
@@ -196,13 +168,12 @@ def submit_review(request):
             return JsonResponse(
                 {"status": "error", "message": f"Error: {str(e)}"}, status=500
             )
-
     return JsonResponse(
         {"status": "error", "message": "Only POST method is allowed"}, status=405
     )
 
 
-# discount data rest framework(get, post)
+# discount data rest framework(get, post)(done)
 class DiscountAPIView(APIView):
     def get(self, request):
         discount_items = DiscountCoupon.objects.all()
@@ -217,12 +188,11 @@ class DiscountAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# cart data rest framework(get, post, delete)
+# cart data rest framework(get, post, delete)(done)
 class CartAPIView(APIView):
     # get cart data
     def get(self, request):
         user_id = request.query_params.get("user_id")
-
         if not user_id:
             return Response(
                 {"error": "user_id parameter is required"},
@@ -237,48 +207,28 @@ class CartAPIView(APIView):
                 {"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-    # save to cart model
-    def post(self, request, item_id):
+
+# for write true in confirm (done)
+@csrf_exempt
+def confirm_order(request, item_id):
+    if request.method == "POST":
         try:
             cart_item = Cart.objects.get(id=item_id)
 
             # Update the ordered status to True
             cart_item.ordered = True
             cart_item.save()
-            print(cart_item)
+
             return JsonResponse(
                 {"message": "Order confirmed successfully!"}, status=200
             )
         except Cart.DoesNotExist:
             return JsonResponse({"error": "Cart item not found"}, status=404)
-
-    # # delete from Cart and Pending Order model
-    # def delete(self, request, item_id):
-    #     try:
-    #         print(item_id)
-    #         # Fetch the cart item using item_id
-    #         cart_item = Cart.objects.get(id=item_id)
-    #         cart = cart_item.cart_details
-    #         cart_item.delete()
-
-    #         print(cart_item, request, cart)
-    #         # pending_order = PendingOrder.objects.get(order_details=cart)
-    #         # pending_order.delete()
-    #         return Response(
-    #             {"status": "success", "message": "Item removed from cart."},
-    #             status=status.HTTP_204_NO_CONTENT,
-    #         )
-    #     except Cart.DoesNotExist:
-    #         return Response(
-    #             {"status": "error", "message": "Item not found in cart."},
-    #             status=status.HTTP_404_NOT_FOUND,
-    #         )
+    else:
+        return JsonResponse({"error": "Invalid request method"}, status=405)
 
 
-from django.views.decorators.http import require_http_methods
-
-
-@csrf_exempt  # Disabling CSRF protection
+@csrf_exempt  # Disabling CSRF protection (done)
 def remove_from_cart(request):
     if request.method == "POST":
         try:
@@ -318,7 +268,7 @@ def remove_from_cart(request):
 
 
 # for use of Account react component and update value of user indatabase
-# (put method)
+# (put method) (done)
 @method_decorator(csrf_exempt, name="dispatch")
 class UpdateProfileView(View):
     # update user details
@@ -475,7 +425,7 @@ def verify_otp(request):
                 user = UserDataSet.objects.get(phone=phone)
                 if (
                     user.otp == otp
-                ) and timezone.now() - user.otp_created_at < timedelta(minutes=5):
+                ) and timezone.now() - user.otp_created_at < timedelta(minutes=2):
                     user = authenticate(request, phone=phone, otp=otp)
                     login(request, user)
                     print(request.user.is_authenticated)
@@ -525,7 +475,7 @@ def get_user_data(request):
     print("User is authenticated:", request.user)
     if request.user.is_authenticated:
         try:
-            user_profile = User.objects.get(phone=request.user.phone)
+            user_profile = UserDataSet.objects.get(phone=request.user.phone)
             # print(
             #     "password is:", user_profile.my_username + "@" + user_profile.phone[:4]
             # )
@@ -579,9 +529,7 @@ def submit_data(request):
         hashed_password = make_password(raw_password)
 
         print(my_username)
-
         print(data)
-
         try:
             # Save the data to the database
             user_data = UserDataSet(
@@ -609,7 +557,7 @@ def submit_data(request):
     )
 
 
-# user can send email to website owner
+# user can send email to website owner for contact us page
 @csrf_exempt
 def contact_view(request):
     if request.method == "POST":
@@ -669,32 +617,42 @@ def add_to_cart(request):
     if request.method == "POST":
         try:
             data = json.loads(request.body)
-            # Extract data from request
             user_id = data.get("user")
             cart_details = data.get("cart_details")
-            ordered = data.get("ordered")
             last_updated = data.get("last_updated")
+            quantity = data.get("quantity")
 
             User = get_user_model()
             user = User.objects.get(id=user_id)
 
-            add_cart = Cart(
-                user=user,
-                cart_details=cart_details,
-                ordered=ordered,
-                last_updated=last_updated,
-                email=user.email,
-            )
+            # Check if the item already exists in the user's cart
+            existing_cart_item = Cart.objects.filter(
+                user=user, cart_details=cart_details, ordered=False
+            ).first()
 
-            add_cart.save()
-            print("Added to Cart Successfully...")
+            if existing_cart_item:
+                # If the item exists, increase the quantity
+                existing_cart_item.quantity += quantity
+                existing_cart_item.last_updated = last_updated
+                existing_cart_item.save()
+                message = "Cart quantity updated successfully."
+            else:
+                # If the item does not exist, create a new cart entry
+                new_cart_item = Cart(
+                    user=user,
+                    cart_details=cart_details,
+                    last_updated=last_updated,
+                    email=user.email,
+                    quantity=quantity,
+                )
+                new_cart_item.save()
+                message = "Item added to cart successfully."
 
-            return JsonResponse(
-                {"status": "success", "message": "Item added to cart."}, status=201
-            )
+            return JsonResponse({"status": "success", "message": message}, status=201)
 
         except Exception as e:
             return JsonResponse({"status": "error", "message": str(e)}, status=400)
+
     return JsonResponse(
         {"status": "error", "message": "Invalid request method"}, status=400
     )
@@ -708,7 +666,7 @@ def show_conformed(request):
         user = data.get("user")
 
         # Filter cart items for the user where ordered is True
-        cart_items = Cart.objects.filter(user=user, ordered=True)
+        cart_items = FinalOrder.objects.filter(user=user, ordered=True)
 
         # Serialize the cart items
         serializer = CartItemSerializer(cart_items, many=True)
@@ -725,7 +683,7 @@ def show_conformed(request):
 
 # generate bill and send it to respected mail
 @csrf_exempt
-def generate_payment(request):
+def generate_bill(request):
     if request.method == "POST":
         try:
             data = json.loads(request.body)
@@ -737,6 +695,7 @@ def generate_payment(request):
             email = data.get("email")
             name = data.get("name")
             cart_details = data.get("order_details")
+            quantity = data.get("quantity")
 
             # fetch from cart
             changeTrue = Cart.objects.get(id=item_id)
@@ -746,10 +705,8 @@ def generate_payment(request):
             print(user)
 
             address = user.address
-
             # Example string
             amount = cart_details["price"]
-
             # Regular expression to extract price
             match = re.search(r"₹(\d+)", amount)
 
@@ -760,7 +717,7 @@ def generate_payment(request):
                 print("Price not found")
             order_id = str(random.randint(10000000, 99999999))
 
-            total_amount = amount * int(cart_details["quantity"])
+            total_amount = amount * quantity
             discount_coupon = 0
             discount_amount = 0
             percentage = 0
@@ -776,22 +733,23 @@ def generate_payment(request):
                     discount = ""
                     print("Not Exists...", e)
 
-            myOrder = PendingOrder(
+            myOrder = FinalOrder(
                 user=user,
-                phone=phone,
-                email=email,
-                address=address,
                 order_details=cart_details,
                 order_id=order_id,
                 amount=amount,
                 name=name,
+                email=email,
+                phone=phone,
                 discount=percentage,
+                address=address,
+                quantity=quantity,
             )
             myOrder.save()
 
-            # Update the ordered status to True
             changeTrue.ordered = True
             changeTrue.save()
+            # changeTrue.delete()
 
             # save to database
             # ---------------------------------------------------------------------------
@@ -808,6 +766,7 @@ def generate_payment(request):
                 "discount_coupon": percentage,
                 "payable_amount": total_amount - discount_amount,
                 "discount_amount": discount_amount,
+                "quantity": quantity,
             }
             html_message = render_to_string("email.html", context)
             plain_message = strip_tags(html_message)
@@ -834,6 +793,63 @@ def generate_payment(request):
 
         except Exception as e:
             return JsonResponse({"status": "error", "message": str(e)}, status=400)
+    return JsonResponse(
+        {"status": "error", "message": "Invalid request method"}, status=400
+    )
+
+
+# for increase quntity
+@csrf_exempt
+def increase_quantity(request, cart_item_id):
+    if request.method == "POST":
+        try:
+            cart_item = Cart.objects.get(id=cart_item_id, ordered=False)
+            cart_item.quantity += 1
+            cart_item.save()
+
+            return JsonResponse(
+                {
+                    "status": "success",
+                    "message": "Quantity increased",
+                    "new_quantity": cart_item.quantity,
+                },
+                status=200,
+            )
+        except Exception as e:
+            return JsonResponse({"status": "error", "message": str(e)}, status=400)
+
+    return JsonResponse(
+        {"status": "error", "message": "Invalid request method"}, status=400
+    )
+
+
+# for decrease quntity
+@csrf_exempt
+def decrease_quantity(request, cart_item_id):
+    if request.method == "POST":
+        try:
+            cart_item = Cart.objects.get(id=cart_item_id, ordered=False)
+
+            if cart_item.quantity > 1:
+                cart_item.quantity -= 1
+                cart_item.save()
+                return JsonResponse(
+                    {
+                        "status": "success",
+                        "message": "Quantity decreased",
+                        "new_quantity": cart_item.quantity,
+                    },
+                    status=200,
+                )
+            else:
+                return JsonResponse(
+                    {"status": "error", "message": "Quantity cannot be less than 1"},
+                    status=400,
+                )
+
+        except Exception as e:
+            return JsonResponse({"status": "error", "message": str(e)}, status=400)
+
     return JsonResponse(
         {"status": "error", "message": "Invalid request method"}, status=400
     )
