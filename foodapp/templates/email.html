@@ -112,9 +112,12 @@
         </table>
 
         <p class="total">Total Payable Amount: ₹{{ payable_amount }}</p>
-        <p class="total">Discount Applied: ₹{{ discount_amount }}</p>
-        <p class="total">Discount Coupon: {{ discount }}</p>
-        <p class="total">Discount: {{ discount_coupon }}%</p>
+
+        {% if discount %}
+          <p class="total">Discount Applied: ₹{{ discount_amount }}</p>
+          <p class="total">Discount Coupon: {{ discount }}</p>
+          <p class="total">Discount: {{ discount_coupon }}%</p>
+        {% endif %}
 
         <p>If you have any questions or need further assistance, please contact us.</p>
       </div>

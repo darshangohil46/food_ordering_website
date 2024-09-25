@@ -176,7 +176,7 @@ class UserDataSet(AbstractBaseUser):
 
 class FinalOrder(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    order_details = models.JSONField()
+    cart_details = models.JSONField()
     order_id = models.CharField(max_length=100)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     name = models.CharField(max_length=255)

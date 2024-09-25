@@ -10,6 +10,16 @@ from django.contrib.auth import get_user_model
 
 from django.conf import settings
 from datetime import timedelta
+from django.core.mail import EmailMultiAlternatives
+
+
+# for send pdf of bill on email
+from weasyprint import HTML
+import pdfkit
+import base64
+
+
+from django.core.mail import EmailMessage
 
 
 from django.template.loader import render_to_string
@@ -23,7 +33,7 @@ from django.utils import timezone
 
 User = get_user_model()
 
-import json, random, re
+import json, random, re, os
 
 # Create your views here.
 from rest_framework.views import APIView
@@ -666,7 +676,7 @@ def show_conformed(request):
         user = data.get("user")
 
         # Filter cart items for the user where ordered is True
-        cart_items = FinalOrder.objects.filter(user=user, ordered=True)
+        cart_items = Cart.objects.filter(user=user, ordered=True)
 
         # Serialize the cart items
         serializer = CartItemSerializer(cart_items, many=True)
@@ -687,7 +697,7 @@ def generate_bill(request):
     if request.method == "POST":
         try:
             data = json.loads(request.body)
-            print(data)
+            # print(data)
             item_id = data.get("item_id")
             discount = data.get("code")
             user_id = data.get("user_id")
@@ -735,7 +745,7 @@ def generate_bill(request):
 
             myOrder = FinalOrder(
                 user=user,
-                order_details=cart_details,
+                cart_details=cart_details,
                 order_id=order_id,
                 amount=amount,
                 name=name,
@@ -771,26 +781,44 @@ def generate_bill(request):
             html_message = render_to_string("email.html", context)
             plain_message = strip_tags(html_message)
 
+            # Convert the bill to PDF
+            html = HTML(string=html_message)
+            pdf_file = html.write_pdf()
+
             try:
                 # Send email
-                send_mail(
+                # Create email with both plain text and HTML content
+                email_message = EmailMultiAlternatives(
                     subject=f"Order Confirmation - Order #{order_id}",
-                    message=plain_message,
+                    body=plain_message,
                     from_email=settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[email],
-                    html_message=html_message,
+                    to=[email],
                 )
+
+                # Attach the HTML content as the email body
+                email_message.attach_alternative(html_message, "text/html")
+
+                # Attach the PDF file
+                email_message.attach(
+                    f"order_{order_id}.pdf", pdf_file, "application/pdf"
+                )
+                pdf_base64 = base64.b64encode(pdf_file).decode("utf-8")
+
+                # Send email
+                email_message.send()
+
+                return JsonResponse(
+                    {
+                        "status": "success",
+                        "message": "Order is now on the way... Please check your email for the confirmation.",
+                        "html": html_message,
+                        "pdf": pdf_base64,
+                    },
+                    status=200,
+                )
+
             except Exception as e:
                 return JsonResponse({"status": "error", "message": str(e)}, status=400)
-
-            return JsonResponse(
-                {
-                    "status": "success",
-                    "message": "Order is now on way...Please! check Your Email...",
-                },
-                status=200,
-            )
-
         except Exception as e:
             return JsonResponse({"status": "error", "message": str(e)}, status=400)
     return JsonResponse(
@@ -869,7 +897,7 @@ def admin_orders(request):
                 "phone": order.phone,
                 "amount": float(order.amount),
                 "quantity": order.quantity,
-                "order_details": order.order_details,
+                "order_details": order.cart_details,
                 "discount": order.discount,
                 "address": order.address,
             }
@@ -888,7 +916,7 @@ def delete_order(request):
             id = data.get("order_id")
             print(id)
             order = FinalOrder.objects.get(id=id, complete=False)
-            order.ordered = True
+            order.complete = True
             order.save()
             return JsonResponse(
                 {"status": "success", "message": "Order deleted successfully"},

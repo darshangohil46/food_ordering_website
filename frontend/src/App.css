@@ -166,14 +166,14 @@
 }
 
 /* not show in mobile */
-@media (max-width: 1023px) {
+@media (max-width: 1231px) {
     .third_navbar {
         display: none;
     }
 }
 
 /* only show in mobile */
-@media (min-width: 1023px) {
+@media (min-width: 1231px) {
     .navbar_icon {
         display: none;
     }

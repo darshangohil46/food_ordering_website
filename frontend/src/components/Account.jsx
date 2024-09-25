@@ -60,7 +60,7 @@ export default function Account() {
     }
   }, [navigate, userId]);
 
-
+  
   const validatePhoneNumber = (phone) => {
     const phoneRegex = /^[0-9]{10}$/; // Example: Validates 10-digit phone numbers
     return phoneRegex.test(phone);
@@ -229,11 +229,10 @@ export default function Account() {
                     <li key={index} className="list-group-item">
                       <div>
                         <h5 className="text-warning" style={{ textAlign: "center" }}>{item.cart_details.name}</h5>
-                        <p><strong>Item ID:</strong> {item.cart_details.item_id}</p>
+                        {/* <p><strong>Item ID:</strong> {item.cart_details.item_id}</p> */}
+                        <p><img src={item.cart_details.img} alt="img" style={{ width: "250px" }} /></p>
                         <p><strong>Price:</strong> {item.cart_details.price}</p>
-                        <p><strong>Quantity:</strong> {item.cart_details.quantity}</p>
-                        <p><strong>Rating:</strong> {item.cart_details.rating}</p>
-                        <p><strong>Timing:</strong> {item.cart_details.timing}</p>
+                        <p><strong>Quantity:</strong> {item.quantity}</p>
                         <p><strong>Type:</strong> {item.cart_details.type}</p>
                         <p><strong>Address:</strong> {item.cart_details.address}</p>
                         <p><strong>Last Updated:</strong> {new Date(item.last_updated).toLocaleString()}</p>

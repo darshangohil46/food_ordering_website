@@ -33,8 +33,8 @@ const Menu = () => {
 
       })
       .catch(error => {
-        navigate('/');
-        alert("Please! Login first or Create Account on our website")
+        // navigate('/');
+        // alert("Please! Login first or Create Account on our website")
         console.error("There was an error fetching the data!", error);
       });
   }, [navigate]);
@@ -113,9 +113,9 @@ const Menu = () => {
     setAlertMessage(null);
   };
 
-  if (!userData) {
-    return null;  // Return null if user data isn't loaded yet
-  }
+  // if (!userData) {
+  //   return null;  // Return null if user data isn't loaded yet
+  // }
 
   return (
     <>
@@ -153,9 +153,14 @@ const Menu = () => {
                   <p className="card-text mb-auto"></p>
                   <p className="card-text mb-auto"><strong>Price:</strong> {item.price}</p>
                   <p className="card-text mb-auto"><strong>Address:</strong> {item.address}</p>
-                  <a className="icon-link gap-1 icon-link-hover stretched-link" onClick={() => handleShowModal(item)}>
-                    Add to Cart
-                  </a>
+
+                  {userData &&
+                    <>
+                      <a className="icon-link gap-1 icon-link-hover stretched-link" onClick={() => handleShowModal(item)}>
+                        Add to Cart
+                      </a>
+                    </>
+                  }
                 </div>
                 <div className="col-auto d-lg-block">
                   <img src={item.img_url} alt={item.restaurant_name} className="bd-placeholder-img menu_card" width="250px" height="250px" />
@@ -177,7 +182,7 @@ const Menu = () => {
                 </div>
                 <div className="modal-body">
                   <p><strong>Type:</strong> {selectedItem.type}</p>
-                  <p><strong>Rating:</strong> {selectedItem.rating}</p>
+                  <p><strong>Price:</strong> {selectedItem.price}</p>
                   <p><strong>Address:</strong> {selectedItem.address}</p>
                   <div className="form-group">
                     <label htmlFor="quantity">Quantity:</label>
@@ -192,7 +197,7 @@ const Menu = () => {
                   </div>
                 </div>
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-primary" onClick={handleOrder}>Add to Cart</button>
+                  <button type="button" className="btn btn-outline-warning" onClick={handleOrder}>Add to Cart</button>
                 </div>
               </div>
             </div>

@@ -152,54 +152,28 @@ export default function Navbar() {
                                         {login &&
                                             <>
                                                 <nav className="third_navbar">
-                                                    <ul className="nav ">
-                                                        {/* Home Icon */}
-                                                        <li className="nav-item">
-                                                            <a className="nav-link" href="/">
-                                                                <i className="fas fa-home"></i>
-                                                            </a>
-                                                        </li>
-
-                                                        {/* Menu Icon */}
-                                                        <li className="nav-item">
-                                                            <a className="nav-link" href="/menu">
-                                                                <i className="fas fa-utensils"></i>
-                                                            </a>
-                                                        </li>
-
-                                                        {/* Cart icon */}
-                                                        <li className="nav-item">
-                                                            <a className="nav-link" href="/cart">
-                                                                <i className="fas fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-
-                                                        {/* Account Icon */}
-                                                        <li className="nav-item">
-                                                            <a className="nav-link" href="/account">
-                                                                <i className="fas fa-user"></i>
-                                                            </a>
-                                                        </li>
-
-                                                        {/* Contact Us Icon */}
-                                                        <li className="nav-item">
-                                                            <a className="nav-link" href="/contactus">
-                                                                <i className="fas fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-
-                                                        {/* review Icon */}
-                                                        <li className="nav-item">
-                                                            <a className="nav-link" href="/review">
-                                                                <i className="fas fa-star"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li className="nav-item">
-                                                            <a className="nav-link" onClick={userLogout}>
-                                                                <i className="fas fa-sign-out-alt"></i>
-                                                            </a>
-                                                        </li>
-
+                                                    <ul className="nav nav-underline justify-content-between">
+                                                        <NavLink className="nav-item nav-link link-body-emphasis text-success m-2" activeClassName="active" to="/menu">
+                                                            Menu
+                                                        </NavLink>
+                                                        <NavLink className="nav-item nav-link link-body-emphasis text-success m-2" activeClassName="active" to="/discount">
+                                                            Discounts
+                                                        </NavLink>
+                                                        <NavLink className="nav-item nav-link link-body-emphasis text-success m-2" activeClassName="active" to="/cart">
+                                                            Cart
+                                                        </NavLink>
+                                                        <NavLink className="nav-item nav-link link-body-emphasis text-success m-2" activeClassName="active" to="/account">
+                                                            Account
+                                                        </NavLink>
+                                                        <NavLink className="nav-item nav-link link-body-emphasis text-success m-2" activeClassName="active" to="/contactus">
+                                                            ContactUs
+                                                        </NavLink>
+                                                        <NavLink className="nav-item nav-link link-body-emphasis text-success m-2" activeClassName="active" to="/review">
+                                                            Reviews
+                                                        </NavLink>
+                                                        <a className="nav-item nav-link link-body-emphasis text-success m-2" activeClassName="active" onClick={userLogout}>
+                                                            Logout
+                                                        </a>
                                                     </ul>
                                                 </nav>
                                             </>
