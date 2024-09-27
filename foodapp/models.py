@@ -34,17 +34,6 @@ class Carousel(models.Model):
         return self.title
 
 
-class Menu(models.Model):
-    img_url = models.URLField(max_length=500)
-    price = models.CharField(max_length=100)
-    restaurant_name = models.CharField(max_length=255)
-    type = models.CharField(max_length=255)
-    address = models.TextField()
-
-    def __str__(self):
-        return f"{self.restaurant_name} - {self.type}"
-
-
 class DiscountCoupon(models.Model):
     code = models.CharField(max_length=50, unique=True)  # Unique coupon code
     discount_percentage = models.PositiveIntegerField()
@@ -56,39 +45,6 @@ class DiscountCoupon(models.Model):
 
     def is_valid(self):
         return self.is_active and self.expiration_date > timezone.now()
-
-
-# class Pizza(models.Model):
-#     img_url = models.URLField(max_length=500)
-#     price = models.CharField(max_length=100)
-#     restaurant_name = models.CharField(max_length=255)
-#     type = models.CharField(max_length=255)  # e.g., 'Pizza'
-#     address = models.TextField()
-
-#     def __str__(self):
-#         return f"{self.restaurant_name} - {self.type}"
-
-
-# class Burger(models.Model):
-#     img_url = models.URLField(max_length=500)
-#     price = models.CharField(max_length=100)
-#     restaurant_name = models.CharField(max_length=255)
-#     type = models.CharField(max_length=255)  # e.g., 'Burger'
-#     address = models.TextField()
-
-#     def __str__(self):
-#         return f"{self.restaurant_name} - {self.type}"
-
-
-# class Other(models.Model):
-#     img_url = models.URLField(max_length=500)
-#     price = models.CharField(max_length=100)
-#     restaurant_name = models.CharField(max_length=255)
-#     type = models.CharField(max_length=255)  # e.g., 'Other'
-#     address = models.TextField()
-
-#     def __str__(self):
-#         return f"{self.restaurant_name} - {self.type}"
 
 
 class Cart(models.Model):
@@ -189,7 +145,7 @@ class FinalOrder(models.Model):
     complete = models.BooleanField(default=False)  # Status of the order
 
     def __str__(self):
-        return f"ID: {self.id} Total pay: {self.amount*self.quantity} :: {self.amount} {self.order_id} - {self.user}"
+        return f"ID: {self.id} Total pay: {self.amount} :: {self.order_id} - {self.user} - {self.complete}"
 
 
 class Review(models.Model):
@@ -212,3 +168,73 @@ class Review(models.Model):
 
     class Meta:
         ordering = ["-created_at"]
+
+
+# food items ---------------------------------------------------------
+class Menu(models.Model):
+    img_url = models.URLField(max_length=500)
+    price = models.CharField(max_length=100)
+    restaurant_name = models.CharField(max_length=255)
+    type = models.CharField(max_length=255)
+    address = models.TextField()
+
+    def __str__(self):
+        return f"{self.restaurant_name} - {self.type} - {self.price}"
+
+
+class PizzaBurger(models.Model):
+    img_url = models.URLField(max_length=500)
+    price = models.CharField(max_length=100)
+    restaurant_name = models.CharField(max_length=255)
+    type = models.CharField(max_length=255)
+    address = models.TextField()
+
+    def __str__(self):
+        return f"{self.restaurant_name} - {self.type} - {self.price}"
+
+
+class Dessert(models.Model):
+    img_url = models.URLField(max_length=500)
+    price = models.CharField(max_length=100)
+    restaurant_name = models.CharField(max_length=255)
+    type = models.CharField(max_length=255)
+    address = models.TextField()
+
+    def __str__(self):
+        return f"{self.restaurant_name} - {self.type} - {self.price}"
+
+
+class Gujarati(models.Model):
+    img_url = models.URLField(max_length=500)
+    price = models.CharField(max_length=100)
+    restaurant_name = models.CharField(max_length=255)
+    type = models.CharField(max_length=255)
+    address = models.TextField()
+
+    def __str__(self):
+        return f"{self.restaurant_name} - {self.type} - {self.price}"
+
+
+class Panjabi(models.Model):
+    img_url = models.URLField(max_length=500)
+    price = models.CharField(max_length=100)
+    restaurant_name = models.CharField(max_length=255)
+    type = models.CharField(max_length=255)
+    address = models.TextField()
+
+    def __str__(self):
+        return f"{self.restaurant_name} - {self.type} - {self.price}"
+
+
+class SouthIndian(models.Model):
+    img_url = models.URLField(max_length=500)
+    price = models.CharField(max_length=100)
+    restaurant_name = models.CharField(max_length=255)
+    type = models.CharField(max_length=255)
+    address = models.TextField()
+
+    def __str__(self):
+        return f"{self.restaurant_name} - {self.type} - {self.price}"
+
+
+# all food items end ---------------------------------------------------------

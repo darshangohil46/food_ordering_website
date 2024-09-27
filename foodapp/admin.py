@@ -12,7 +12,13 @@ admin.site.register(Cart)
 admin.site.register(FinalOrder)
 admin.site.register(Review)
 
+admin.site.register(PizzaBurger)
+admin.site.register(Dessert)
+admin.site.register(Gujarati)
+admin.site.register(Panjabi)
+admin.site.register(SouthIndian)
 
-admin.site.site_header = "Food Order Website"
-admin.site.index_title = "Food Admin"
+
+admin.site.site_header = "Food Order Website (Foodie)"
+admin.site.index_title = "Foodie Admin"
 admin.site.site_title = "Food Website"

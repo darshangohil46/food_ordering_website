@@ -231,7 +231,7 @@ export default function Account() {
                         <h5 className="text-warning" style={{ textAlign: "center" }}>{item.cart_details.name}</h5>
                         {/* <p><strong>Item ID:</strong> {item.cart_details.item_id}</p> */}
                         <p><img src={item.cart_details.img} alt="img" style={{ width: "250px" }} /></p>
-                        <p><strong>Price:</strong> {item.cart_details.price}</p>
+                        <p><strong>Price:</strong> ₹{item.cart_details.price}</p>
                         <p><strong>Quantity:</strong> {item.quantity}</p>
                         <p><strong>Type:</strong> {item.cart_details.type}</p>
                         <p><strong>Address:</strong> {item.cart_details.address}</p>

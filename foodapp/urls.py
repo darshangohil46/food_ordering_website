@@ -13,10 +13,17 @@ urlpatterns += [
     path("api/check-phone/", check_phone, name="check_phone"),
     path("api/verify-otp/", verify_otp, name="verify_otp"),
     path("api/contactus/", contact_view, name="contactus"),
-    path("api/menuitems/", MenuAPIView.as_view(), name="menuitems"),
     path("api/check-authentication/", get_user_data, name="check_authentication"),
     path("api/logout/", user_logout, name="user_logout"),
     path("api/get-discount/", DiscountAPIView.as_view(), name="get-discount"),
+]
+urlpatterns += [
+    path("api/menuitems/", MenuAPIView.as_view(), name="menuitems"),
+    path("api/pizza-burger/", PizzaBurgerAPIView.as_view(), name="pizza-burger-item"),
+    path("api/dessert/", DessertAPIView.as_view(), name="dessert-item"),
+    path("api/gujarati/", GujaratiAPIView.as_view(), name="gujarati-item"),
+    path("api/punjabi/", PanjabiAPIView.as_view(), name="panjabi-item"),
+    path("api/southindian/", SouthIndianAPIView.as_view(), name="south-indian-item"),
 ]
 urlpatterns += [
     path(

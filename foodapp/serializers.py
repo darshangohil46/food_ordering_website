@@ -14,12 +14,6 @@ class CarouselItemSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class MenuItemSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Menu
-        fields = "__all__"
-
-
 class DiscountItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = DiscountCoupon
@@ -49,3 +43,39 @@ class ReviewSerializer(serializers.ModelSerializer):
             "user_last_name",
             "user_my_username",
         ]
+
+
+class MenuItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Menu
+        fields = "__all__"
+
+
+class PizzaBurgerItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PizzaBurger
+        fields = "__all__"
+
+
+class DessertItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Dessert
+        fields = "__all__"
+
+
+class GujaratiItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Gujarati
+        fields = "__all__"
+
+
+class PanjabiItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Panjabi
+        fields = "__all__"
+
+
+class SouthIndianItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SouthIndian
+        fields = "__all__"

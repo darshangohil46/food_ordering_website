@@ -92,11 +92,13 @@
             <th>Item Name</th>
             <th>Price</th>
           </tr>
-          <tr>
-            <td>{{ order_details.name }}</td>
-            <td>{{ order_details.type }}</td>
-            <td>₹{{ order_details.price }}</td>
-          </tr>
+          {% for item in order_details %}
+            <tr>
+              <td>{{ item.name }}</td>
+              <td>{{ item.type }}</td>
+              <td>₹{{ item.price }}</td>
+            </tr>
+          {% endfor %}
         </table>
         <table>
           <tr>
@@ -104,17 +106,19 @@
             <th>Restaurant Address</th>
             <th>Total</th>
           </tr>
-          <tr>
-            <td>{{ quantity }}</td>
-            <td>{{ order_details.address }}</td>
-            <td>₹{{ order_details.price }} X {{ quantity }} = ₹{{ payable_amount }}</td>
-          </tr>
+          {% for item in order_details %}
+            <tr>
+              <td>{{ item.quantity }}</td>
+              <td>{{ item.address }}</td>
+              <td>₹{{ item.total_price }}</td>
+            </tr>
+          {% endfor %}
         </table>
 
-        <p class="total">Total Payable Amount: ₹{{ payable_amount }}</p>
+        <p class="total">Total Payable Amount: ₹{{ payable_amount|floatformat:2 }}</p>
 
         {% if discount %}
-          <p class="total">Discount Applied: ₹{{ discount_amount }}</p>
+          <p class="total">Discount Applied: ₹{{ discount_amount|floatformat:2 }}</p>
           <p class="total">Discount Coupon: {{ discount }}</p>
           <p class="total">Discount: {{ discount_coupon }}%</p>
         {% endif %}

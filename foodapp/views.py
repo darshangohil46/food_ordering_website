@@ -65,6 +65,11 @@ class SampleAPIView(APIView):
             "menuitems": f"{self.x}api/menuitems/",
             "discount": f"{self.x}api/get-discount/",
             "review": f"{self.x}api/review/",
+            "gujarati": f"{self.x}api/gujarati/",
+            "panjabi": f"{self.x}api/punjabi/",
+            "southindian": f"{self.x}api/southindian/",
+            "pizza-burger": f"{self.x}api/pizza-burger/",
+            "dessert": f"{self.x}api/dessert/",
             # "submit-data": f"{self.x}api/submit-data/",
             # "check-phone": f"{self.x}api/check-phone/",
             # "verify-phone": f"{self.x}api/verify-otp/",
@@ -120,6 +125,81 @@ class MenuAPIView(APIView):
 
     def post(self, request):
         serializer = MenuItemSerializer(data=request.data, many=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# food data rest framework(get, post)
+class PizzaBurgerAPIView(APIView):
+    def get(self, request):
+        menu_items = PizzaBurger.objects.all()
+        serializer = PizzaBurgerItemSerializer(menu_items, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = PizzaBurgerItemSerializer(data=request.data, many=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# food data rest framework(get, post)
+class DessertAPIView(APIView):
+    def get(self, request):
+        menu_items = Dessert.objects.all()
+        serializer = DessertItemSerializer(menu_items, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = DessertItemSerializer(data=request.data, many=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# food data rest framework(get, post)
+class GujaratiAPIView(APIView):
+    def get(self, request):
+        menu_items = Gujarati.objects.all()
+        serializer = GujaratiItemSerializer(menu_items, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = GujaratiItemSerializer(data=request.data, many=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# food data rest framework(get, post)
+class PanjabiAPIView(APIView):
+    def get(self, request):
+        menu_items = Panjabi.objects.all()
+        serializer = PanjabiItemSerializer(menu_items, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = PanjabiItemSerializer(data=request.data, many=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# food data rest framework(get, post)
+class SouthIndianAPIView(APIView):
+    def get(self, request):
+        menu_items = SouthIndian.objects.all()
+        serializer = SouthIndianItemSerializer(menu_items, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = SouthIndianItemSerializer(data=request.data, many=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -676,7 +756,9 @@ def show_conformed(request):
         user = data.get("user")
 
         # Filter cart items for the user where ordered is True
-        cart_items = Cart.objects.filter(user=user, ordered=True)
+        cart_items = Cart.objects.filter(user=user, ordered=True).order_by(
+            "-last_updated"
+        )
 
         # Serialize the cart items
         serializer = CartItemSerializer(cart_items, many=True)
@@ -697,37 +779,52 @@ def generate_bill(request):
     if request.method == "POST":
         try:
             data = json.loads(request.body)
-            # print(data)
-            item_id = data.get("item_id")
-            discount = data.get("code")
+            print(data)
+            discount = data.get("code", "NA")
             user_id = data.get("user_id")
             phone = data.get("phone")
             email = data.get("email")
             name = data.get("name")
             cart_details = data.get("order_details")
-            quantity = data.get("quantity")
 
             # fetch from cart
-            changeTrue = Cart.objects.get(id=item_id)
-            print(changeTrue)
             User = get_user_model()
             user = User.objects.get(id=user_id)
+            address = user.address
             print(user)
 
-            address = user.address
-            # Example string
-            amount = cart_details["price"]
-            # Regular expression to extract price
-            match = re.search(r"₹(\d+)", amount)
+            total_amount = 0
+            order_items = []
+            total_quantity = 0
 
-            if match:
-                amount = int(match.group(1))
-                print("Price:", amount)
-            else:
-                print("Price not found")
+            for item in cart_details:
+                item_id = item.get("item_id")
+                quantity = item.get("quantity")
+                price = item.get("price")
+
+                # Calculate the total price for this item
+                item_total = float(price) * float(quantity)
+                total_amount += item_total
+                total_quantity += int(quantity)
+
+                # Optionally, store item details in a list for further processing
+                order_items.append(
+                    {
+                        "img": item.get("img"),
+                        "address": item.get("address"),
+                        "type": item.get("type"),
+                        "item_id": item_id,
+                        "name": item.get("title"),
+                        "quantity": quantity,
+                        "price": price,
+                        "total_price": item_total,
+                    }
+                )
+
+            print("Price:", total_amount)
+            print(order_items)
             order_id = str(random.randint(10000000, 99999999))
 
-            total_amount = amount * quantity
             discount_coupon = 0
             discount_amount = 0
             percentage = 0
@@ -745,21 +842,23 @@ def generate_bill(request):
 
             myOrder = FinalOrder(
                 user=user,
-                cart_details=cart_details,
+                cart_details=order_items,
                 order_id=order_id,
-                amount=amount,
+                amount=total_amount - discount_amount,
                 name=name,
                 email=email,
                 phone=phone,
                 discount=percentage,
                 address=address,
-                quantity=quantity,
+                quantity=total_quantity,
             )
             myOrder.save()
 
-            changeTrue.ordered = True
-            changeTrue.save()
-            # changeTrue.delete()
+            cart = Cart.objects.filter(user=user_id)
+            for item in cart:
+                c = Cart.objects.get(id=item.id)
+                c.ordered = True
+                c.save()
 
             # save to database
             # ---------------------------------------------------------------------------
@@ -768,7 +867,7 @@ def generate_bill(request):
                 "phone": phone,
                 "email": email,
                 "address": address,
-                "order_details": cart_details,
+                "order_details": order_items,
                 "order_id": order_id,
                 "total_amount": total_amount,
                 "name": name,
@@ -886,7 +985,7 @@ def decrease_quantity(request, cart_item_id):
 # for admin site show all admin data
 def admin_orders(request):
     if request.user.is_authenticated and request.user.is_admin:
-        orders = FinalOrder.objects.filter(complete=False).order_by("-last_updated")
+        orders = FinalOrder.objects.filter(complete=False).order_by("last_updated")
         data = [
             {
                 "id": order.id,
