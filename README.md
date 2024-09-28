@@ -44,7 +44,7 @@
 
 
 ## Installation
-
+- **Install GTK from here: https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases
 ### Backend (Django)
 
 1. Clone the repository:
