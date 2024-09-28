@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/646/70c556759b901b0363e7797211656646.jpg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Gwalia Sweets & Fast Food",
+        "type": "Mithai, Street Food, Desserts, Beverages",
+        "address": "S.G. Highway, Ahmedabad"
+    },
+    {
+        "id": 2,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/313/c233f7eee49a6c7e8e4528df246e6313.jpg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Das Khaman",
+        "type": "Gujarati, Street Food",
+        "address": "Maninagar, Ahmedabad"
+    },
+    {
+        "id": 3,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/0a1/b65cf6d564a4179228764cc6bf34d0a1.jpg?output-format=webp",
+        "price": "150.00",
+        "restaurant_name": "Tea Post",
+        "type": "Tea, Coffee, Beverages, Sandwich, Fast Food",
+        "address": "Prahladnagar, Ahmedabad"
+    },
+    {
+        "id": 4,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/000/27ab882fc9ada3393114d445c1bcf000.png?output-format=webp",
+        "price": "150.00",
+        "restaurant_name": "Vipul Dudhiya Sweets",
+        "type": "Mithai, Street Food, Gujarati",
+        "address": "Navrangpura, Ahmedabad"
+    },
+    {
+        "id": 5,
+        "img_url": "https://b.zmtcdn.com/data/pictures/chains/0/110280/d843ec6614447e2739472c1dfaa32a82_o2_featured_v2.jpg?output-format=webp",
+        "price": "1000.00",
+        "restaurant_name": "Agashiye - The House Of MG",
+        "type": "Gujarati",
+        "address": "Lal Darwaja, Ahmedabad"
+    },
+    {
+        "id": 6,
+        "img_url": "https://b.zmtcdn.com/data/pictures/4/20071564/e5c7e2334bda56323e66f86aa9d42357_o2_featured_v2.jpg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Radhe Krishna Live Dhokla Khaman",
+        "type": "Gujarati",
+        "address": "Satellite, Ahmedabad"
+    },
+    {
+        "id": 7,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/054/87110a34d537dc80781d738bc7c92054.jpeg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Jalaram Khaman House",
+        "type": "Street Food, Gujarati",
+        "address": "Bodakdev, Ahmedabad"
+    },
+    {
+        "id": 8,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/2e8/e7c02e710a409b86bcfcffd8078c02e8.jpeg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Laxmi Ganthiya Rath",
+        "type": "Gujarati, Street Food",
+        "address": "Naranpura, Ahmedabad"
+    },
+    {
+        "id": 9,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/bdc/c8ceaff4721bff639cdb5d71ef310bdc.jpg?output-format=webp",
+        "price": "150.00",
+        "restaurant_name": "Chetna Ganthia Rath",
+        "type": "Mithai, Street Food, Gujarati",
+        "address": "Paldi, Ahmedabad"
+    },
+    {
+        "id": 10,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/4d5/6589e10041548d8bd91912fdd3bf44d5.jpeg",
+        "price": "100.00",
+        "restaurant_name": "Vadigam Farsan House",
+        "type": "Gujarati, Street Food",
+        "address": "Shahibaug, Ahmedabad"
+    }
+]

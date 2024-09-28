@@ -1,0 +1,75 @@
+
+[
+    {
+        "id": 1,
+        "img_url": "https://b.zmtcdn.com/data/pictures/7/21006547/d23809c0ded7a1a61d6012126cc28a08_o2_featured_v2.jpg?output-format=webp",
+        "price": "400.00",
+        "restaurant_name": "Dakshinayan",
+        "type": "South Indian, Desserts, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 2,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/075/20ce98c6e120b71dcc6b97d56705d075.jpg?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "Wow Dosa Fusion Of South Indian Food",
+        "type": "South Indian, Desserts, Beverages, Coffee",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 3,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/0fb/375fe76d4ffbc03a5202b708fa1a90fb.jpg?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "Shivam Snacks",
+        "type": "South Indian, North Indian, Chinese, Street Food, Pizza, Fast Food",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 4,
+        "img_url": "https://b.zmtcdn.com/data/pictures/5/110395/352e1cbcbe6ad93935ed28d1cba120f3_o2_featured_v2.jpg?output-format=webp",
+        "price": "350.00",
+        "restaurant_name": "Prince Restaurant  Naranpura",
+        "type": "South Indian, North Indian, Chinese, Sandwich, Pizza, Street Food, Ice Cream, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 5,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/1f5/159b1a9d22ee10fa4d72d432e273f1f5.jpeg?output-format=webp",
+        "price": "250.00",
+        "restaurant_name": "Volga Restaurant",
+        "type": "North Indian, South Indian",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 6,
+        "img_url": "https://b.zmtcdn.com/data/pictures/2/21358912/7b03ffd1daabd83ffcc80f75de8e6518_o2_featured_v2.jpg?output-format=webp",
+        "price": "150.00",
+        "restaurant_name": "Udipi Cafe",
+        "type": "North Indian, South Indian, Chinese, Fast Food, Street Food, Ice Cream, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 7,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/1c5/758f9ba504b6b82304dfbadf424f71c5.jpg?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "Vaibhav Restaurant",
+        "type": "North Indian, South Indian, Chinese, Fast Food, Desserts, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 8,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/566/b8481e9df890a4e8887ece19e3f09566.jpg?output-format=webp",
+        "price": "150.00",
+        "restaurant_name": "Udupi Shree Darshini Restaurant",
+        "type": "South Indian, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 9,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/023/bb6ba260e50442fd0a038b62d1555023.jpeg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Welcome Refreshment",
+        "type": "South Indian, North Indian",
+        "address": "Ahmedabad, Gujarat"
+    }
+]

@@ -1,0 +1,163 @@
+
+[
+    {
+        "id": 2,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/6aa/f55016931d13f7489c6140de76fa16aa.jpg?output-format=webp",
+        "price": "300.00",
+        "restaurant_name": "Pizza Hut",
+        "type": "Pizza, Pasta, Italian, Desserts, Beverages, North Indian",
+        "address": "Shahibaug"
+    },
+    {
+        "id": 3,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/e6b/103a2f7eac15e30b549bea1383915e6b.jpg?output-format=webp",
+        "price": "500.00",
+        "restaurant_name": "Little French House",
+        "type": "Cafe, Beverages, Continental, Italian, Mexican, Fast Food, Desserts, Waffle",
+        "address": "CG Road"
+    },
+    {
+        "id": 4,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/086/2b86c1e8fb771f76309c4c10926be086.jpg?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "La Pino'z Pizza",
+        "type": "Pizza, Pasta, Italian, Fast Food",
+        "address": "Navrangpura"
+    },
+    {
+        "id": 5,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/b64/643cb105d9ec8ef7cd0c97af9c426b64.jpg?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "Martino'z Pizza",
+        "type": "Pizza, Fast Food, Mexican",
+        "address": "Astodia"
+    },
+    {
+        "id": 6,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/171/de4c274ddfabd9f26f1d4265a55b6171.jpg?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "Choice Snack Bar",
+        "type": "Pizza, Sandwich, Panini, Fast Food, Street Food, Desserts, Shake, Beverages",
+        "address": "Suchitra Circle"
+    },
+    {
+        "id": 7,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/3e1/91b8fac6dfb8231a5946034f30e2d3e1.jpeg?output-format=webp",
+        "price": "250.00",
+        "restaurant_name": "Neelkamal Snacks And Coffee Bar",
+        "type": "Cafe, Beverages, Momos, Fast Food, Street Food, Sandwich",
+        "address": "LalDarwaja"
+    },
+    {
+        "id": 8,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/491/fb4b9d4775505e82d05d6734ef3e2491.png?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "McDonald's",
+        "type": "Burger, Fast Food, Beverages",
+        "address": "Maninagar"
+    },
+    {
+        "id": 9,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/3a4/62f6264ff859f76d1b745421815d03a4.jpg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Maharaj",
+        "type": "Fast Food, Sandwich, Street Food, Pizza",
+        "address": "Delhi Darwaja"
+    },
+    {
+        "id": 10,
+        "img_url": "https://b.zmtcdn.com/data/pictures/8/21211168/c19d2e29571607b2910a8b2ae6a44948_o2_featured_v2.jpg?output-format=webp",
+        "price": "150.00",
+        "restaurant_name": "Manek Pizza & Sandwich - Manekchowk Wala",
+        "type": "Pizza, Sandwich",
+        "address": "Relief Road"
+    },
+    {
+        "id": 11,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/842/f82ce34efad5f9cf05249ac3dffeb842.jpg",
+        "price": "200.00",
+        "restaurant_name": "The Poutinerie",
+        "type": "Burger, Fast Food, Beverages, Coffee",
+        "address": "Bhadra"
+    },
+    {
+        "id": 12,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/f8e/1bf6588293db3546072a6e74a1818f8e.jpg",
+        "price": "200.00",
+        "restaurant_name": "Burger King",
+        "type": "Burger, Fast Food, Desserts, Beverages",
+        "address": "Nikol"
+    },
+    {
+        "id": 13,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/b4b/87735ba937cfe6e2dd337ba37dbdeb4b.jpg",
+        "price": "250.00",
+        "restaurant_name": "Big Scoop Cafe",
+        "type": "Cafe, Coffee, Tea, Shake, Bubble Tea, Beverages, Ice Cream, Fast Food",
+        "address": "Vastral"
+    },
+    {
+        "id": 14,
+        "img_url": "https://b.zmtcdn.com/data/pictures/7/21169937/b67697f3e72cf2f937dfd731e69578fb_featured_v2.jpg",
+        "price": "200.00",
+        "restaurant_name": "Nook By Grace Coffee Co.",
+        "type": "Coffee, Continental, Italian, Shake, Tea, Beverages",
+        "address": "CG Road"
+    },
+    {
+        "id": 15,
+        "img_url": "https://b.zmtcdn.com/data/pictures/4/21037134/634dfcc80a7697c0494625994249ea14_o2_featured_v2.jpg",
+        "price": "250.00",
+        "restaurant_name": "Dhvjal - The Organic Kingdom Restaurant",
+        "type": "North Indian, Pasta, Sandwich, Burger, Fast Food, Street Food, Shake",
+        "address": "Ellisbridge"
+    },
+    {
+        "id": 16,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/a05/f4b51164c20e976ed435f9c85e4dea05.jpg",
+        "price": "350.00",
+        "restaurant_name": "The Chocolate Room",
+        "type": "Cafe, Coffee, Pizza, Italian, Bakery, Waffle, Shake, Beverages",
+        "address": "Astodia"
+    },
+    {
+        "id": 17,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/04e/a3ffa4dbc68a023a7bd621387510e04e.jpg",
+        "price": "200.00",
+        "restaurant_name": "Wah",
+        "type": "Fast Food, Street Food, Pizza, Burger, Sandwich, South Indian, Chinese",
+        "address": "Suchitra Circle"
+    },
+    {
+        "id": 18,
+        "img_url": "https://b.zmtcdn.com/data/pictures/3/112363/258806dd3219c2fa8c48b5d3e85880e2_o2_featured_v2.jpg",
+        "price": "400.00",
+        "restaurant_name": "Oshwal",
+        "type": "North Indian, South Indian, Chinese, Fast Food, Beverages, Gujarati",
+        "address": "Shahibaug"
+    },
+    {
+        "id": 19,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/70c/2e25612212d1e1a9cf965c07ee61470c.png",
+        "price": "150.00",
+        "restaurant_name": "Chai Sutta Bar",
+        "type": "Fast Food, Sandwich, Beverages, Street Food",
+        "address": "Delhi Darwaja"
+    },
+    {
+        "id": 20,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/f76/ea2b2448cffde264b0ce0e24d41c4f76.jpg",
+        "price": "100.00",
+        "restaurant_name": "Jay Bhavani Vadapav",
+        "type": "Street Food, Fast Food, Sandwich, Beverages",
+        "address": "Relief Road"
+    },
+    {
+        "id": 21,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/6d6/08c0dbe3d15183e3484dac9aa5d916d6.jpg",
+        "price": "400.00",
+        "restaurant_name": "May Flower - Hotel The Westend",
+        "type": "North Indian, Chinese, Continental, Biryani, Desserts, Beverages",
+        "address": "Vastral"
+    }
+]

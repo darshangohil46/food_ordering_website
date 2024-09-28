@@ -1,0 +1,43 @@
+
+[
+    {
+        "id": 1,
+        "img_url": "https://images.unsplash.com/photo-1630175914039-69ffca8a0604?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": "350.00",
+        "restaurant_name": "Pind Da Dhaba",
+        "type": "Punjabi, North Indian",
+        "address": "Chandigarh, Punjab"
+    },
+    {
+        "id": 2,
+        "img_url": "https://plus.unsplash.com/premium_photo-1661313614926-e96981a05269?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHVuamFiaSUyMGdyaWxsfGVufDB8fDB8fHww",
+        "price": "500.00",
+        "restaurant_name": "Punjab Grill",
+        "type": "Punjabi, North Indian, Mughlai",
+        "address": "Amritsar, Punjab"
+    },
+    {
+        "id": 3,
+        "img_url": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTl8fHB1bmphYmklMjBkaXNofGVufDB8fDB8fHww",
+        "price": "400.00",
+        "restaurant_name": "Chawla's 2",
+        "type": "Punjabi, North Indian",
+        "address": "Ludhiana, Punjab"
+    },
+    {
+        "id": 4,
+        "img_url": "https://plus.unsplash.com/premium_photo-1675382377341-7abf48097f9b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHB1bmphYmklMjBncmlsbHxlbnwwfHwwfHx8MA%3D%3D",
+        "price": "150.00",
+        "restaurant_name": "Amritsari Kulcha King",
+        "type": "Punjabi, Street Food",
+        "address": "Amritsar, Punjab"
+    },
+    {
+        "id": 5,
+        "img_url": "https://media.istockphoto.com/id/1226369698/photo/vegetarian-palak-paneer.webp?a=1&b=1&s=612x612&w=0&k=20&c=SPDAKQw-mT_rkTQZf4g8yeWh827zj6w_6uj7wvjTqjg=",
+        "price": "300.00",
+        "restaurant_name": "Kesar Da Dhaba",
+        "type": "Punjabi, North Indian, Desserts",
+        "address": "Amritsar, Punjab"
+    }
+]

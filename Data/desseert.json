@@ -1,0 +1,75 @@
+
+[
+    {
+        "id": 1,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/303/35ac6b0b26baef867281f77fa1898303.jpeg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Great Britain Waffle",
+        "type": "Waffle, Desserts, Coffee, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 2,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/7ef/dd73f13610a03e9eafc033e75481b7ef.jpg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "Helou Ice Cream",
+        "type": "Ice Cream, Desserts",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 3,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/a33/1f8f16af6d0b8e4a7393c3abb5e58a33.jpg?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "Super Donuts - American Eatery & Bakery",
+        "type": "Bakery, Burger, Wraps, Fast Food, Desserts, Coffee, Shake",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 4,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/609/c4f9a94ebb010ed16a9c3e71980dd609.jpg?output-format=webp",
+        "price": "100.00",
+        "restaurant_name": "The Dessert Heaven - Pastry, Brownie and Cakes",
+        "type": "Desserts, Bakery, Mithai",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 5,
+        "img_url": "https://b.zmtcdn.com/data/pictures/6/20924776/e34d5af841797ad15f2eade26f656075_o2_featured_v2.jpg?output-format=webp",
+        "price": "350.00",
+        "restaurant_name": "Oven The Bakery & Cafe",
+        "type": "Cafe, Bakery, Waffle, Desserts, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 6,
+        "img_url": "https://b.zmtcdn.com/data/pictures/5/110395/352e1cbcbe6ad93935ed28d1cba120f3_o2_featured_v2.jpg?output-format=webp",
+        "price": "500.00",
+        "restaurant_name": "Little French House",
+        "type": "Cafe, Beverages, Continental, Italian, Mexican, Fast Food, Desserts, Waffle",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 7,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/c53/fa02862d568d4785f37fbbb0c5e25c53.jpg?output-format=webp",
+        "price": "150.00",
+        "restaurant_name": "New York Waffles & Dinges",
+        "type": "Waffle, Bakery, Desserts, Shake, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 8,
+        "img_url": "https://b.zmtcdn.com/data/dish_photos/285/e5d24ea87ce68617a9a4b5a4caad6285.jpg?output-format=webp",
+        "price": "150.00",
+        "restaurant_name": "Prem Mevad Ice Cream",
+        "type": "Rolls, Pasta, Fast Food, Ice Cream, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    },
+    {
+        "id": 9,
+        "img_url": "https://b.zmtcdn.com/data/pictures/5/21152635/43efe791bb1a0d15ab16c597ddab87f6_o2_featured_v2.jpg?output-format=webp",
+        "price": "200.00",
+        "restaurant_name": "Mad Over Donuts",
+        "type": "Desserts, Bakery, Beverages",
+        "address": "Ahmedabad, Gujarat"
+    }
+]

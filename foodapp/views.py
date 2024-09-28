@@ -165,6 +165,7 @@ class DessertAPIView(APIView):
 class GujaratiAPIView(APIView):
     def get(self, request):
         menu_items = Gujarati.objects.all()
+        
         serializer = GujaratiItemSerializer(menu_items, many=True)
         return Response(serializer.data)
 
