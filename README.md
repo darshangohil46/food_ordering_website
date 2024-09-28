@@ -53,7 +53,7 @@
     cd food_ordering_website
     ```
 
-2. Install dependencies:
+2. Install dependencies (Install required libraries):
     ```bash
     pip install -r requirements.txt
     ```
@@ -68,7 +68,7 @@
     ```bash
     python manage.py createsuperuser
     ```
-    - Fill correct phone end email id (phone number is verified by Twillo)
+    - Fill correct phone end email id (phone number is verified by Twilio)
 
 5. Run the Django development server:
     ```bash
