@@ -56,6 +56,9 @@
 2. Install dependencies (Install required libraries):
     ```bash
     pip install -r requirements.txt
+    pip install django
+    pip install django-cors-headers
+    pip install djangorestframework
     ```
 
 3. Apply migrations:
